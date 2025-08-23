@@ -94,4 +94,66 @@
         overflow-wrap: break-word;
         font-size: smaller;
     }
+    .Services .Estate{
+        background-image: url(./assets/Estate.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column: 1 / 3;
+    }
+    
+    
+    .Services .Farming{
+        background-image: url(./assets/Farming.JPG);
+        background-size: cover;
+        grid-column: 3/5;
+    }
+    .Services .Security{
+        background-image: url(./assets/Security.JPG);
+        background-size: cover;
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+    .Services .Insurance{
+        background-image: url(./assets/Insurance.JPG);
+        background-size: cover;
+        grid-row: 3/4;
+        grid-column: 3/5;
+    }
+    .Services .Trade{
+        background-image: url(./assets/Trade.JPG);
+        background-size: cover;
+        grid-row: 2/3;
+        grid-column: 3/5;
+        
+    }
+    .Services .Consulting{
+        background-image: url(./assets/Consulting.JPG);
+        background-size: cover;
+        grid-row: 4/5;
+        grid-column: 1/3;
+    }
+    .Services .Golf{
+        background-image: url(./assets/Golf.JPG);
+        background-size: cover;
+        grid-row: 4/6;
+        grid-column: 3/6;
+    }
+    .Services .Tv{
+        background-image: url(./assets/TV.JPG);
+        background-size: cover;
+        grid-row: 5/6;
+        grid-column:1/3 ;
+    }
+    .Services .Football{
+        background-image: url(./assets/Football.JPG);
+        background-size: cover;
+    }
+    .Services .Music{
+        background-image: url(./assets/Music.JPG);
+        background-size: contain;
+    }
+    
+    
 }
