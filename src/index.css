@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  min-height: 100%;
+  color: white;
+  margin: auto;
+  
+  background: linear-gradient(to bottom, rgba(25, 45, 76, 1), rgba(0, 1, 1, 1));
+  background-repeat: no-repeat;
+  background-size: auto;
+  
+}
+
