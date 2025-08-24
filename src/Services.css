@@ -19,6 +19,8 @@
     justify-content: center;
     text-align: center;
     overflow-wrap: break-word;
+    font-size: small;
+    font-weight: lighter;
 }
 .Services p{
     text-align: center;
