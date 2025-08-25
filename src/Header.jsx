@@ -20,10 +20,13 @@ function Header(){
                 <li> <a href="#">REAL ESTATE</a></li>
                 <li><a href="#">AGRIBUSINESS</a></li>
                 <li><a href="#">SECURITY</a></li>
+                <li><a href="#">GOLF</a></li>
                 <li ><a href="#"> <img src={Logo} width="100px" height="100px" alt="Logo" ></img></a> </li>
                 <li><a href="#">INSURANCE</a></li>
                 <li><a href="#">LOGISTICS</a></li>
                 <li><a href="#">CONSULTING</a></li>
+                <li><a href="#">ENTERTAINMENT</a></li>
+
             </ol>
             <div className="bar" onClick={toggleMenu} >
                 <FaBars />

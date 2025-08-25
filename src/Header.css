@@ -10,6 +10,7 @@ ol{
 li{
     margin: auto;
     font-size: smaller;
+    font-weight: normal;
 
 }
 li:hover{
