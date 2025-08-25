@@ -18,7 +18,7 @@ function Header(){
         <a  className='logo' href="#"> <img src={Logo} width="70px" height="70px" alt="Logo" ></img></a>
             <ol className= {isOpen ? 'links logo' : 'links'} >
                 <li> <a href="#">REAL ESTATE</a></li>
-                <li><a href="#">FARMING AND AGRIBUSINESS</a></li>
+                <li><a href="#">AGRIBUSINESS</a></li>
                 <li><a href="#">SECURITY</a></li>
                 <li ><a href="#"> <img src={Logo} width="100px" height="100px" alt="Logo" ></img></a> </li>
                 <li><a href="#">INSURANCE</a></li>

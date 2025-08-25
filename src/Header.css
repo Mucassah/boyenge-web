@@ -9,6 +9,7 @@ ol{
 }
 li{
     margin: auto;
+    font-size: smaller;
 
 }
 li:hover{

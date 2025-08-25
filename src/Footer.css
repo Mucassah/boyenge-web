@@ -1,7 +1,12 @@
 
 .Footer{
     display: flex;
+    font-size: 10px;
+    margin: 5px;
 }
 .Footer a{
     padding: 10px;
+}
+.Footer a:hover{
+    color: rgb(198, 143, 67);
 }
