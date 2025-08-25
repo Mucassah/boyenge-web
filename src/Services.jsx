@@ -31,7 +31,7 @@ function Services(){
                 </a>
                 <a className='Trade' href='#'>
                     <div className='Trade'>
-                        <h2>TRADE AND DISTRIBUTION</h2>
+                        <h2>LOGISTICS</h2>
                         
                     </div>
                 </a>
@@ -49,7 +49,7 @@ function Services(){
                 </a>
                 <a className='Tv' href='#'>
                     <div className='Tv'>
-                        <h2>TELEVISION</h2>
+                        <h2>ENTERTAINMENT</h2>
                         
                     </div>
                 </a>

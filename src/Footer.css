@@ -1,0 +1,7 @@
+
+.Footer{
+    display: flex;
+}
+.Footer a{
+    padding: 10px;
+}

@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Services from "./Services";
-import Contact from "./Contact";
-import Boyenge from "./Boyenge";
+import Footer from "./Footer";
+
 import './App.css';
 
 
@@ -10,7 +10,7 @@ function App() {
     <>
       <Header/>
       <Services/>
-      <Boyenge/>
+      <Footer/>
 
     </>
   )

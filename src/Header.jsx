@@ -22,7 +22,7 @@ function Header(){
                 <li><a href="#">SECURITY</a></li>
                 <li ><a href="#"> <img src={Logo} width="100px" height="100px" alt="Logo" ></img></a> </li>
                 <li><a href="#">INSURANCE</a></li>
-                <li><a href="#">TRADE AND DISTRIBUTION</a></li>
+                <li><a href="#">LOGISTICS</a></li>
                 <li><a href="#">CONSULTING</a></li>
             </ol>
             <div className="bar" onClick={toggleMenu} >
