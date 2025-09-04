@@ -57,6 +57,9 @@ a{
    li:nth-child(5){
     display: none;
    }
+   .picha{
+    display: none;
+   }
    nav{
     display: flex;
    }
