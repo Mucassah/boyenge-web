@@ -1,9 +1,18 @@
-.video-container { 
+/*.video-container { 
     position: relative; 
     width: 100%; 
     height: 100vh; /* Full screen */ 
-    overflow: hidden; 
-} 
+    /*overflow: hidden; 
+}*/
+.video-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;  /* ✅ Allow content to grow past initial screen */
+    overflow-x: hidden; /* Optional: prevent sideways scrolling */
+    overflow-y: auto;   /* Optional: allow scrolling if needed */
+    padding-bottom: 2rem; /* Add breathing room at bottom */
+}
+
 .video-container h3{
     text-align: center;
 }
