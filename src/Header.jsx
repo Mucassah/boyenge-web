@@ -17,15 +17,15 @@ function Header(){
         <nav>
         <Link className='logo' to="/"> <img src={Logo} width="70px" height="70px" alt="Logo" ></img></Link>
             <ol className= {isOpen ? 'links logo' : 'links'} >
-                <CustomLink to="/esto">REAL ESTATE</CustomLink>
-                <CustomLink to="/agribusiness">AGRIBUSINESS</CustomLink>
-                <CustomLink to="/security">SECURITY</CustomLink>
-                <CustomLink to="/golf">GOLF</CustomLink>
+                <CustomLink to="/esto"  onClick={() => setIsOpen(false)}>REAL ESTATE</CustomLink>
+                <CustomLink to="/agribusiness" onClick={() => setIsOpen(false)}>AGRIBUSINESS</CustomLink>
+                <CustomLink to="/security" onClick={() => setIsOpen(false)}>SECURITY</CustomLink>
+                <CustomLink to="/golf" onClick={() => setIsOpen(false)}>GOLF</CustomLink>
                 <Link className='picha' to="/"> <img src={Logo} width="100px" height="100px" alt="Logo"/></Link>
-                <CustomLink to="/insurance">INSURANCE</CustomLink>
-                <CustomLink to="/logistics">LOGISTICS</CustomLink>
-                <CustomLink to="/consulting">CONSULTING</CustomLink>
-                <CustomLink to="/entertainment">ENTERTAINMENT</CustomLink>
+                <CustomLink to="/insurance" onClick={() => setIsOpen(false)}>INSURANCE</CustomLink>
+                <CustomLink to="/logistics" onClick={() => setIsOpen(false)}>LOGISTICS</CustomLink>
+                <CustomLink to="/consulting" onClick={() => setIsOpen(false)}>CONSULTING</CustomLink>
+                <CustomLink to="/entertainment" onClick={() => setIsOpen(false)}>ENTERTAINMENT</CustomLink>
 
             </ol>
             <div className="bar" onClick={toggleMenu} >
