@@ -1,10 +1,10 @@
 import React from "react";
 import "./Security.css";
-import privatesec from "./assets/Privatesecurity.jpg";
-import audit from "./assets/Audit.jpg";
-import cctv from "./assets/CCTV.jpg";
-import Eventsecurity from "./assets/Eventsecurity.jpg";
-import Surveillance from "./assets/Surveillance.jpg";
+import privatesec from "./assets/Privatesecurity.JPG";
+import audit from "./assets/Audit.JPG";
+import cctv from "./assets/CCTV.JPG";
+import Eventsecurity from "./assets/Eventsecurity.JPG";
+import Surveillance from "./assets/Surveillance.JPG";
 
 
 function Security() {

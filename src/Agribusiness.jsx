@@ -1,10 +1,10 @@
 import React from "react";
 import "./Agribusiness.css"; 
-import agritech from "./assets/agritech.jpg";
-import agroprocessing from "./assets/agroprocessing.jpg";
-import farmleasing from "./assets/farmleasing.jpg";
-import livestock from "./assets/livestock.jpg";
-import cropproduction from "./assets/cropproduction.jpg";
+import agritech from "./assets/agritech.JPG";
+import agroprocessing from "./assets/agroprocessing.JPG";
+import farmleasing from "./assets/farmleasing.JPG";
+import livestock from "./assets/livestock.JPG";
+import cropproduction from "./assets/cropproduction.JPG";
 
 function Agribusiness() {
   return (
