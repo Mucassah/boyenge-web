@@ -176,8 +176,8 @@
     .home-fold__title {
       left: 50%; /* center horizontally */
       transform: translate(-50%, -50%); /* center both vertically and horizontally */
-      text-align: center;
       line-height: 0.5;
+      text-align: left;
     }
   
     .home-fold__title span:first-child {
