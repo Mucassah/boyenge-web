@@ -174,7 +174,7 @@
   
     /* Reduce h1 size and center it */
     .home-fold__title {
-      left: 20%; /* center horizontally */
+      left: 40%; /* center horizontally */
       transform: translate(-50%, -50%); /* center both vertically and horizontally */
       line-height: 0.5;
       text-align: left;
