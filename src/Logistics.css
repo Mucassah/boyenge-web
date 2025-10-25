@@ -174,10 +174,11 @@
   
     /* Reduce h1 size and center it */
     .home-fold__title {
-      left: 40%; /* center horizontally */
-      transform: translate(-50%, -50%); /* center both vertically and horizontally */
+      left: 0%; 
+      transform: translateY(-50%); 
       line-height: 0.5;
       text-align: left;
+      position: absolute;
     }
   
     .home-fold__title span:first-child {
