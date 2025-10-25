@@ -7,6 +7,7 @@ import Esto from "./Esto";
 import Golf from "./Golf";
 import Security from "./Security";
 import Agribusiness from "./Agribusiness";
+import Logistics from "./Logistics";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/golf" element={<Golf/>} />
             <Route path="/security" element={<Security/>} />
             <Route path="/agribusiness" element={<Agribusiness/>} />
+            <Route path="/logistics" element={<Logistics/>} />
 
 
             {/* Add more routes here as needed */}

@@ -1,0 +1,227 @@
+/* Home fold container */
+
+.home-fold {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Video background container */
+  .home-fold__video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    overflow: hidden;
+  }
+  
+  /* Lottie background */
+  .background-lottie {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* H1 on top of video */
+  .home-fold__title {
+    position: absolute;
+    top: 50%;
+    left: 50px; /* padding from left */
+    transform: translateY(-50%);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    z-index: 2;
+    line-height: 1.2;
+    font-size: 5rem;
+    font-weight: 2000;
+  }
+  
+  /* Make both spans same width */
+  .home-fold__title span {
+    display: inline-block;
+    width: 100%; /* same width for both lines */
+    text-align: left;
+  }
+  
+  /* BOYENGE */
+  .home-fold__title span:first-child {
+    font-size: 5rem; /* bigger */
+  }
+  
+  /* LOGISTICS */
+  .home-fold__title span:last-child {
+    font-size: 5rem; /* smaller under BOYENGE */
+    margin-top: 0.5rem;
+  }
+  
+  /* About-us container side by side */
+  .about-us {
+    display: flex;
+    gap: 2rem; /* spacing between divs */
+    align-items: flex-start;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  
+  /* About-us text */
+  .about-us > div:first-child {
+    flex: 1;
+  }
+  
+  /* Make first paragraph bigger */
+  .about-us p:first-of-type {
+    font-size: 3rem; /* slightly bigger */
+    font-weight: 1000;
+    line-height: 1;
+    color: rgba(186, 21, 21, 0.827);
+  }
+  
+  /* Image div */
+  .about-us > div:last-child {
+    flex: 1;
+  }
+  
+  /* Ensure image fits nicely with small border radius */
+  .about-us img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* small rounded corners */
+  }
+  .services-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    padding: 2rem 1rem;
+  }
+  
+  .services-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid #ddd;
+  }
+  
+  .service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex-wrap: wrap;
+  }
+  
+  .service-item h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    flex: 1;
+    color: #000;
+    
+  }
+  
+  .service-info {
+    flex: 2;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.4s ease;
+  }
+  
+  /* Hover effects */
+  .service-item:hover {
+    background-color: #0b2341; /* dark blue from your screenshot */
+    color: #fff;
+  }
+  .service-item:hover h3{
+    color: white;
+  }
+  
+  
+  .service-item:hover .service-info {
+    opacity: 1;
+    max-height: 200px;
+    margin-left: 2rem;
+  }
+  
+  
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Stack About Us vertically */
+    .home-fold__video {
+        height: 60vh; /* smaller height on tablets */
+      }
+
+    .about-us {
+      flex-direction: column; /* stack divs vertically */
+      gap: 1.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      align-items: center; /* center content */
+      text-align: center;  /* center text inside */
+    }
+  
+    /* Reduce h1 size and center it */
+    .home-fold__title {
+      left: 50%; /* center horizontally */
+      transform: translate(-50%, -50%); /* center both vertically and horizontally */
+      text-align: center;
+      line-height: 0.5;
+    }
+  
+    .home-fold__title span:first-child {
+      font-size: 3rem; /* reduce h1 size */
+    }
+  
+    .home-fold__title span:last-child {
+      font-size: 3rem;
+    }
+  
+    .about-us p:first-of-type {
+      font-size: 1.1rem; /* slightly smaller for mobile */
+    }
+    .service-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .service-info {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  
+    .service-item h3 {
+      font-size: 1.4rem;
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    .home-fold__video {
+        height: 50vh; /* smaller height for mobile */
+      }
+    /* Further adjustments for mobile */
+    .home-fold__title span:first-child {
+      font-size: 2.5rem;
+    }
+  
+    .home-fold__title span:last-child {
+      font-size: 1.8rem;
+    }
+  
+    .about-us p:first-of-type {
+      font-size: 1rem;
+    }
+  }
+  
