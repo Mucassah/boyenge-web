@@ -33,13 +33,12 @@ function Consulting() {
       const scrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
 
-      // how far past the hero section we are
       const scrollProgress = Math.max(0, scrollY - viewportHeight * 0.8);
-      const sectionLength = viewportHeight * 1.5; // scroll distance before next testimonial
+      const sectionLength = viewportHeight * 1.5; 
       const newIndex = Math.floor(scrollProgress / sectionLength) % testimonials.length;
 
       setCurrentIndex(newIndex);
-      setRotation((scrollY / 5) % 360); // smooth anticlockwise rotation
+      setRotation((scrollY / 5) % 360);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -65,7 +64,9 @@ function Consulting() {
             Over <strong>700 satisfied customers</strong> are no coincidence — we offer
             all round and indepth analysis in different sectors of the economy.
           </p>
-          <button className="cta-button">Book a call</button>
+          <a href="mailto:info@boyenge.com" className="cta-button">
+            Book a call
+          </a>
         </div>
       </section>
 
@@ -96,6 +97,31 @@ function Consulting() {
             className="chess-piece"
             style={{ transform: `rotate(-${rotation}deg)` }}
           />
+        </div>
+      </div>
+
+      {/* ===== STATIC CHESS IMAGE SECTIONS ===== */}
+      <div className="scroll-chess-container">
+        <div className="chess-section">
+          <div className="text">
+            <h2>Strategic Insights</h2>
+            <p>
+              Our team provides deep strategic insights into market trends
+              and business opportunities to ensure sustainable growth.
+            </p>
+          </div>
+          <img src={chessDark} alt="chess" className="chess-image" />
+        </div>
+
+        <div className="chess-section reverse">
+          <div className="text">
+            <h2>Tailored Solutions</h2>
+            <p>
+              Every business is unique. We craft solutions specifically for
+              your goals and challenges.
+            </p>
+          </div>
+          <img src={chessLight} alt="chess" className="chess-image" />
         </div>
       </div>
     </div>
