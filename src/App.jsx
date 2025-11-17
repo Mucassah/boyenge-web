@@ -9,6 +9,7 @@ import Security from "./Security";
 import Agribusiness from "./Agribusiness";
 import Logistics from "./Logistics";
 import Consulting from "./Consulting";
+import Insurance from "./Insurance";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/agribusiness" element={<Agribusiness/>} />
             <Route path="/logistics" element={<Logistics/>} />
             <Route path="/consulting" element={<Consulting/>} />
+            <Route path="/insurance" element={<Insurance/>} />
 
 
             {/* Add more routes here as needed */}
