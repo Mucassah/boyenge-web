@@ -53,18 +53,7 @@ function Services(){
                         
                     </div>
                 </Link>
-                <Link className='Football' to='/Football'>
-                    <div className='Football'>
-                        <h2>FOOTBALL CLUB</h2>
-                        
-                    </div>
-                </Link>
-                <Link className='Music' to='/Music'>
-                    <div className='Music'>
-                        <h2>MUSIC</h2>
-                        
-                    </div>
-                </Link>
+                
 
                 
             </div>
