@@ -1,5 +1,5 @@
 import React from "react";
-import "./EstateService3.css";
+import "./Estateservice3.css";
 
 export default function EstateService3() {
   return (
