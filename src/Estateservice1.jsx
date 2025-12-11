@@ -34,7 +34,7 @@ const Estateservice1 = () => {
         </div>
       </div>
 
-      <button className="estate-btn">VIEW OUR CURRENT LISTINGS</button>
+      
     </div>
   );
 };

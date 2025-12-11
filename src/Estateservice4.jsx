@@ -46,7 +46,9 @@ function Estateservice4() {
             Ready you unlock your investment potential? Schedule a Free Initial Consultation 
             with one of is our Senior Analysts today.
           </p>
+          <a href="mailto:realestate@boyenge.com">
           <button className="cta-btn">Book Your Consultation</button>
+          </a>
         </div>
       </div>
     </div>

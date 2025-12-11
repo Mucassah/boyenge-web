@@ -35,7 +35,9 @@ export default function EstateService3() {
       </div>
 
       {/* CTA Button */}
+      <a href="mailto:realestate@boyenge.com">
       <button className="estate-button">Consult Our Land Experts</button>
+      </a>
     </div>
   );
 }

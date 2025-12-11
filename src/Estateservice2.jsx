@@ -41,9 +41,11 @@ const Estateservice2 = () => {
 
       {/* Button */}
       <div className="estate-button-wrapper">
-        <button className="estate-button">
-          Start Your Project with Us Today
-        </button>
+        <a href="mailto:realestate@boyenge.com">
+          <button className="estate-button">
+            Start Your Project with Us Today
+          </button>
+        </a>
       </div>
     </div>
   );
