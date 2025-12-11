@@ -11,6 +11,10 @@ import Logistics from "./Logistics";
 import Consulting from "./Consulting";
 import Insurance from "./Insurance";
 import Entertainment from "./Entertainment";
+import Estateservice1 from "./Estateservice1";
+import Estateservice2 from "./Estateservice2";
+import Estateservice3 from "./Estateservice3";
+import Estateservice4 from "./Estateservice4";
 
 
 function App() {
@@ -29,6 +33,10 @@ function App() {
             <Route path="/consulting" element={<Consulting/>} />
             <Route path="/insurance" element={<Insurance/>} />
             <Route path="/entertainment" element={<Entertainment />} />
+            <Route path="/estateservice1" element={<Estateservice1 />} />
+            <Route path="/estateservice2" element={<Estateservice2 />} />
+            <Route path="/estateservice3" element={<Estateservice3 />} />
+            <Route path="/estateservice4" element={<Estateservice4 />} />
 
 
 

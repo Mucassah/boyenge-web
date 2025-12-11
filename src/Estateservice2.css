@@ -1,0 +1,98 @@
+/* Wrapper */
+.estate-wrapper {
+  width: 100%;
+  background: #f3f4f6;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center header and button */
+  gap: 40px;
+}
+
+/* Header - centered */
+.estate-header {
+  text-align: center;
+  max-width: 800px; /* optional max width for readability */
+  width: 100%;
+}
+
+.estate-header h1 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  color: #0a3d91;
+}
+
+.estate-header p {
+  margin-top: 10px;
+  color: #555;
+  font-size: clamp(14px, 2.5vw, 17px);
+}
+
+/* Cards Section */
+.estate-cards {
+  display: grid;
+  grid-template-columns: 1fr; /* stack cards on small screens */
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px; /* optional container width */
+}
+
+/* Cards layout on medium/large screens */
+@media (min-width: 768px) {
+  .estate-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards side by side */
+  }
+}
+
+/* Individual Card */
+.estate-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.estate-card h2 {
+  color: #0a57c8;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.estate-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.estate-card li {
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.check {
+  color: #0a57c8;
+  font-weight: bold;
+}
+
+/* Button Section */
+.estate-button-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.estate-button {
+  background: #ff6b1c;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.estate-button:hover {
+  background: #e85d14;
+}

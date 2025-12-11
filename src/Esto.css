@@ -1,9 +1,36 @@
+.service-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-link div {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-link div:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
+/*.service div.clickable {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service div.clickable:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
 /*.video-container { 
     position: relative; 
     width: 100%; 
     height: 100vh; /* Full screen */ 
     /*overflow: hidden; 
 }*/
+
 .video-container {
     position: relative;
     width: 100%;
