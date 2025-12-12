@@ -22,25 +22,25 @@ function Esto() {
 
         <Link to="/estateservice1" className="service-link">
           <div>
-            <h5>Residential<br /> and <br />commercial sale</h5>
+            <h5>RESIDENTIAL<br /> AND <br />COMMERCIAL SALE</h5>
           </div>
         </Link>
 
         <Link to="/estateservice2" className="service-link">
           <div>
-            <h5>Property development<br /> and <br /> management</h5>
+            <h5>PROPERTY DEVELOPMENT<br /> AND <br /> MANAGEMENT</h5>
           </div>
         </Link>
 
         <Link to="/estateservice3" className="service-link">
           <div>
-            <h5>Land acquisition <br />and<br /> leasing</h5>
+            <h5>LAND AQUISITION <br />AND<br /> LEASING</h5>
           </div>
         </Link>
 
         <Link to="/estateservice4" className="service-link">
           <div>
-            <h5>Real estate investment <br />consultancy</h5>
+            <h5>REAL ESTATE INVESTMENT<br />CONSULTANCY</h5>
           </div>
         </Link>
 

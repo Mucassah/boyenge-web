@@ -16,19 +16,16 @@ export default function EstateService3() {
       {/* Service Cards */}
       <div className="estate-grid">
         <div className="estate-card">
-          <img src="/icons/location-icon.svg" alt="Strategic Land Sourcing" />
           <h3>Strategic Land Sourcing</h3>
           <p>Identifying prime parcels...</p>
         </div>
 
         <div className="estate-card">
-          <img src="/icons/handshake-icon.svg" alt="Negotiation & Acquisition" />
           <h3>Negotiation & Acquisition</h3>
           <p>Expert negotiation services...</p>
         </div>
 
         <div className="estate-card">
-          <img src="/icons/gavel-icon.svg" alt="Lease Management & Renewal" />
           <h3>Lease Management & Renewal</h3>
           <p>Comprehensive management of land leases.</p>
         </div>
