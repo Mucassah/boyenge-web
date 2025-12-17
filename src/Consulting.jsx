@@ -64,7 +64,7 @@ function Consulting() {
             Over <strong>700 satisfied customers</strong> are no coincidence — we offer
             all round and indepth analysis in different sectors of the economy.
           </p>
-          <a href="mailto:info@boyenge.com" className="cta-button">
+          <a href="mailto:consulting@boyenge.com" className="cta-button">
             Book a call
           </a>
         </div>
