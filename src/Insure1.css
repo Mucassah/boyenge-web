@@ -1,0 +1,207 @@
+/* --- Base Styling & Variables --- */
+:root {
+    --primary-blue: #1e3a8a;
+    --hover-blue: #1e40af;
+    --text-dark: #0f172a;
+    --text-gray: #475569;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+  }
+  
+  .insure-container {
+    background-color: var(--bg-light);
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .max-width-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* --- Header Styling --- */
+  .header-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .company-tag {
+    color: var(--primary-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .main-title {
+    font-size: 1.85rem;
+    color: var(--text-dark);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  
+  .description {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* --- Content Grid --- */
+  .content-grid {
+    display: flex;
+    flex-direction: column; /* Mobile stack */
+    gap: 50px;
+  }
+  
+  /* --- Image Side --- */
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .service-img {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    display: block;
+  }
+  
+  .badge-247 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+  }
+  
+  /* --- Features Side --- */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .icon-box {
+    min-width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .blue-bg { background-color: #e0e7ff; }
+  .green-bg { background-color: #dcfce7; }
+  .purple-bg { background-color: #f3e8ff; }
+  
+  .feature-text h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 6px 0;
+  }
+  
+  .feature-text p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* --- Button --- */
+  .quote-btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 16px 32px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: var(--transition);
+    margin-top: 10px;
+    width: 100%; /* Full width on mobile */
+  }
+  
+  .quote-btn:hover {
+    background-color: var(--hover-blue);
+    transform: translateY(-2px);
+  }
+  
+  /* --- Media Queries (Responsiveness) --- */
+  
+  /* Tablet Devices (768px and up) */
+  @media (min-width: 768px) {
+    .insure-container {
+      padding: 60px 40px;
+    }
+  
+    .main-title {
+      font-size: 2.5rem;
+    }
+  
+    .quote-btn {
+      width: fit-content; /* Reset button width */
+    }
+  }
+  
+  /* Desktop Devices (1024px and up) */
+  @media (min-width: 1024px) {
+    .insure-container {
+      padding: 100px 20px;
+    }
+  
+    .header-section {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+  
+    .description {
+      margin: 0;
+    }
+  
+    .content-grid {
+      flex-direction: row; /* Side-by-side layout */
+      align-items: center;
+      gap: 80px;
+    }
+  
+    .image-container, .features-list {
+      flex: 1;
+    }
+  
+    .main-title {
+      font-size: 3rem;
+    }
+  }
+  
+  /* Large Desktop (1440px and up) */
+  @media (min-width: 1440px) {
+    .max-width-wrapper {
+      max-width: 1300px;
+    }
+  }

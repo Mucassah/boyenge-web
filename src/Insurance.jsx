@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import "./Insurance.css";
 import Insurancepic from "./assets/Insurancepic.JPG";
 import Health from "./assets/Health.JPG";
@@ -33,7 +34,7 @@ const Insurance = () => {
 
           {/* --- EMAIL BUTTON --- */}
           <a
-            href="mailto:info@boyenge.com?subject=Inquiry"
+            href="mailto:insurance@boyenge.com?subject=Inquiry"
             className="hero-button"
           >
             Talk to an Expert →
@@ -92,23 +93,31 @@ const Insurance = () => {
 
         <div className="industries-scroll">
           <div className="industry-card">
-            <img src={Health} alt="Health insurance" />
-            <span className="industry-label">LIFE & HEALTH INSURANCE</span>
+            <Link to="/insure1">
+              <img src={Health} alt="Health insurance" />
+              <span className="industry-label">LIFE & HEALTH INSURANCE</span>
+            </Link>
           </div>
 
           <div className="industry-card">
-            <img src={Property} alt="Property insurance" />
-            <span className="industry-label">PROPERTY & AUTO INSURANCE</span>
+            <Link to="/insure2">
+              <img src={Property} alt="Property insurance" />
+              <span className="industry-label">PROPERTY & AUTO INSURANCE</span>
+            </Link>
           </div>
 
           <div className="industry-card">
+          <Link to="/insure3">
             <img src={Bizrisk} alt="Business risk coverage" />
             <span className="industry-label">BUSINESS RISK COVERAGE</span>
+          </Link>
           </div>
 
           <div className="industry-card">
+          <Link to="/insure4">
             <img src={Claim} alt="Insurance claim" />
             <span className="industry-label">INSURANCE CLAIM ASSISTANCE</span>
+          </Link>
           </div>
         </div>
       </div>
