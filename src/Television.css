@@ -1,0 +1,136 @@
+:root {
+    --primary-red: #ff0000;
+    --dark-bg: #0f0f0f;
+    --card-bg: #1a1a1a;
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+  }
+  
+  .boyenge-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    line-height: 1.6;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: radial-gradient(circle at center, #252525 0%, #0f0f0f 100%);
+  }
+  
+  .logo-main {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+  }
+  
+  .logo-main span {
+    color: var(--primary-red);
+  }
+  
+  .hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* YouTube Button Styling */
+  .youtube-btn {
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded pill style */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  }
+  
+  .youtube-btn:hover {
+    background-color: #d40000;
+    transform: scale(1.05);
+  }
+  
+  .contact-info {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .contact-info a {
+    color: var(--text-white);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary-red);
+  }
+  
+  /* Services Grid */
+  .services {
+    padding: 80px 10%;
+    background-color: #141414;
+  }
+  
+  .services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .service-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    background: #222;
+  }
+  
+  .service-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 10px;
+    color: var(--text-white);
+  }
+  
+  .service-card p {
+    color: var(--text-gray);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #222;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+  }

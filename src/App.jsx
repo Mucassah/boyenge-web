@@ -19,6 +19,10 @@ import Insure1 from "./Insure1";
 import Insure2 from "./Insure2";
 import Insure3 from "./Insure3";
 import Insure4 from "./Insure4";
+import Music from "./Music";
+import Football from "./Football";
+import Television from "./Television";
+
 
 function App() {
   
@@ -44,6 +48,10 @@ function App() {
             <Route path="/insure2" element={<Insure2 />} />
             <Route path="/insure3" element={<Insure3 />} />
             <Route path="/insure4" element={<Insure4 />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/football" element={<Football />} />
+            <Route path="/television" element={<Television />} />
+
 
 
 
