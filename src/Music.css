@@ -3,7 +3,7 @@
     --primary-gold: #d4af37;
     --dark-bg: #0a0a0a;
     --card-bg: #1a1a1a;
-    --text-light: #ffffff; /* Ensured pure white for header */
+    --text-light: #ffffff;
     --text-dim: #b3b3b3;
   }
   
@@ -19,32 +19,34 @@
     color: var(--text-light);
   }
   
-  /* --- Header/Navbar styles removed --- */
+  /* ================= HERO SECTION ================= */
   
-  
-  /* Hero Section */
   .hero {
-    height: 100vh;
+    min-height: 100vh; /* changed from height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Using a dark placeholder or the previous image with a heavier overlay for better text contrast */
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80');
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+      url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80');
     background-size: cover;
     background-position: center;
-    padding: 20px;
+    padding: 60px 20px;
+  }
+  
+  .hero-content {
+    max-width: 900px;
+    padding-top: 40px; /* controls vertical spacing safely */
   }
   
   .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 15px;
-    color: var(--text-light); /* Set to white */
-    text-transform: uppercase; /* Set to uppercase */
+    color: var(--text-light);
+    text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-top: 100px;
-    padding-top: 70px;
+    line-height: 1.2;
   }
   
   .est {
@@ -63,9 +65,10 @@
     font-size: 1.1rem;
   }
   
-  /* Social Buttons in Hero */
+  /* ================= SOCIAL BUTTONS ================= */
+  
   .hero-socials {
-      margin-bottom: 35px; /* Spacing above the Explore button */
+    margin-bottom: 35px;
   }
   
   .social-btn {
@@ -78,16 +81,24 @@
     transition: 0.3s;
   }
   
-  .yt { background-color: #ff0000; color: white !important; }
-  .sp { background-color: #1DB954; color: white !important; margin-left: 15px; }
-  
-  .social-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  .yt {
+    background-color: #ff0000;
+    color: white !important;
   }
   
+  .sp {
+    background-color: #1DB954;
+    color: white !important;
+    margin-left: 15px;
+  }
   
-  /* CTA Button */
+  .social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* ================= CTA BUTTON ================= */
+  
   .cta-button {
     display: inline-block;
     padding: 15px 35px;
@@ -107,7 +118,8 @@
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
   }
   
-  /* Services Section */
+  /* ================= SERVICES ================= */
+  
   .services {
     padding: 100px 10%;
     background: var(--dark-bg);
@@ -157,7 +169,8 @@
     line-height: 1.5;
   }
   
-  /* Contact Section */
+  /* ================= CONTACT ================= */
+  
   .contact {
     padding: 100px 10%;
     background-color: #111;
@@ -165,10 +178,10 @@
   }
   
   .contact h2 {
-      font-size: 2.5rem;
-      color: var(--primary-gold);
-      text-transform: uppercase;
-      margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    margin-bottom: 30px;
   }
   
   .contact-info {
@@ -178,8 +191,10 @@
   }
   
   .contact-info strong {
-      color: var(--text-light);
+    color: var(--text-light);
   }
+  
+  /* ================= FOOTER ================= */
   
   .footer {
     text-align: center;
@@ -190,14 +205,24 @@
     background: #0a0a0a;
   }
   
-  /* Responsive */
+  /* ================= RESPONSIVE ================= */
+  
   @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.8rem; }
-    .mission { font-size: 1rem; padding: 0 20px; }
-    .cta-button { width: 80%; }
+    .hero {
+      padding: 100px 20px 60px;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.4rem;
+    }
+  
+    .mission {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  
+    .cta-button {
+      width: 100%;
+    }
   }
-  .hero-content h1 {
-    margin-top: 70px;
-    padding-top: 70px;
-
-  }
+  
