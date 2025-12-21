@@ -22,7 +22,7 @@ const BoyengeTV = () => {
             Watch on YouTube
           </a>
           <div className="contact-info">
-            <p>Direct inquiries: <a href="mailto:television@boyenge.com">television@boyeneg.com</a></p>
+            <p>Direct inquiries: <a href="mailto:television@boyenge.com">television@boyenge.com</a></p>
           </div>
         </div>
       </section>

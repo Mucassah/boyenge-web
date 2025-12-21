@@ -6,17 +6,19 @@ import cctv from "./assets/CCTV.JPG";
 import Eventsecurity from "./assets/Eventsecurity.JPG";
 import Surveillance from "./assets/Surveillance.JPG";
 
-
 function Security() {
   return (
-    <div className="security-container">
-      <div className="security-content">
-        <header>
-          <h1>Boyenge Security Solutions</h1>
-          <p>A Subsidiary of Boyenge Holdings Group</p>
+    <div className="sec-security">
+      <div className="sec-security__content">
+
+        <header className="sec-security__header">
+          <h1 className="sec-security__title">Boyenge Security Solutions</h1>
+          <p className="sec-security__subtitle">
+            A Subsidiary of Boyenge Holdings Group
+          </p>
         </header>
 
-        <section className="intro">
+        <section className="sec-security__intro">
           <h2>Your Trust, Our Shield.</h2>
           <p>
             We deliver uncompromising security solutions built on trust,
@@ -25,72 +27,75 @@ function Security() {
           </p>
         </section>
 
-        <section className="services">
-          <h3>Our Core Security Offerings</h3>
-          <div className="service-list">
+        <section className="sec-security__services">
+          <h3 className="sec-security__services-title">
+            Our Core Security Offerings
+          </h3>
 
-            <div className="service-item">
-              <div className="service-text">
+          <div className="sec-security__service-list">
+
+            <div className="sec-security__service-item">
+              <div className="sec-security__service-text">
                 <h4>Private & Corporate Security Solutions</h4>
                 <p>
                   Tailored physical security, access control, and executive protection
                   services for businesses and individuals.
                 </p>
               </div>
-              <div className="service-image">
-                <img src={privatesec} alt="Private and  corporate security" />
+              <div className="sec-security__service-image">
+                <img src={privatesec} alt="Private security" />
               </div>
             </div>
 
-            <div className="service-item">
-              <div className="service-text">
+            <div className="sec-security__service-item">
+              <div className="sec-security__service-text">
                 <h4>CCTV Installation & Monitoring</h4>
                 <p>
-                  State-of-the-art closed-circuit television systems with remote and on-site
-                  monitoring capabilities.
+                  State-of-the-art closed-circuit television systems with remote and
+                  on-site monitoring capabilities.
                 </p>
               </div>
-              <div className="service-image">
+              <div className="sec-security__service-image">
                 <img src={cctv} alt="CCTV Installation" />
               </div>
             </div>
 
-            <div className="service-item">
-              <div className="service-text">
+            <div className="sec-security__service-item">
+              <div className="sec-security__service-text">
                 <h4>Event Security & VIP Protection</h4>
                 <p>
-                  Comprehensive security planning, crowd control, and discreet protection
-                  for high-profile events and VIPs.
+                  Comprehensive security planning, crowd control, and discreet
+                  protection for high-profile events and VIPs.
                 </p>
               </div>
-              <div className="service-image">
-                <img src={Eventsecurity} alt="CCTV Installation" />
+              <div className="sec-security__service-image">
+                <img src={Eventsecurity} alt="Event Security" />
               </div>
             </div>
 
-            <div className="service-item">
-              <div className="service-text">
+            <div className="sec-security__service-item">
+              <div className="sec-security__service-text">
                 <h4>Risk Assessment & Security Audits</h4>
                 <p>
-                  In-depth analysis of vulnerabilities, threat identification, and strategic
-                  recommendations for mitigation.
+                  In-depth analysis of vulnerabilities, threat identification, and
+                  strategic recommendations for mitigation.
                 </p>
               </div>
-              <div className="service-image">
-                <img src={audit} alt="CCTV Installation" />
+              <div className="sec-security__service-image">
+                <img src={audit} alt="Security Audit" />
               </div>
             </div>
 
-            <div className="service-item">
-              <div className="service-text">
+            <div className="sec-security__service-item">
+              <div className="sec-security__service-text">
                 <h4>24/7 Surveillance & Rapid Response Units</h4>
                 <p>
-                  Constant monitoring by highly trained personnel and fast deployment of
-                  response teams to emergencies.
+                  Constant monitoring by highly trained personnel and fast
+                  deployment of response teams to emergencies.
                 </p>
               </div>
-              <div className="service-image">
-                <img src={Surveillance} alt="CCTV Installation" />
+              <div className="sec-security__service-image">
+                <img src={Surveillance} alt="Surveillance" />
               </div>
             </div>
 
@@ -98,9 +103,9 @@ function Security() {
         </section>
       </div>
 
-      <footer>
-        <p>© {new Date().getFullYear()} Boyenge Security Solutions. All Rights Reserved.</p>
-        <p>Part of the Boyenge Holdings Group. Confidentiality | Vigilance | Integrity</p>
+      <footer className="sec-security__footer">
+        <p>© {new Date().getFullYear()} Boyenge Security Solutions.</p>
+        <p>Confidentiality | Vigilance | Integrity</p>
       </footer>
     </div>
   );

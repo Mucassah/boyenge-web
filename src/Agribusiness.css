@@ -1,4 +1,8 @@
-.agri-container {
+/* ===============================
+   AGRIBUSINESS – ISOLATED STYLES
+   =============================== */
+
+   .agri-container {
     font-family: Arial, sans-serif;
     padding: 40px;
     background-color: #f8f8f8;
@@ -10,78 +14,159 @@
     margin: 0 auto;
   }
   
-  header h1 {
+  /* ===============================
+     HEADER
+     =============================== */
+  
+  .agri-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .agri-title {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #192d4c;
-    
   }
   
-  header p {
+  .agri-subtitle {
     font-size: 1rem;
-    color:#192d4c; 
-  }
-  
-  .intro {
-    margin: 2rem 0;
-  }
-  
-  .intro h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
     color: #192d4c;
   }
   
-  .services {
-    margin: 2rem 0;
-  }
+  /* ===============================
+     INTRO
+     =============================== */
   
-  .services h3 {
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-    color: #192d4c;
-  }
-  
-  .service-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .service-item {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1 1 45%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 1px solid #ddd;
-    min-height: 180px;
-  }
-  
-  .service-text h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #192d4c;
-  }
-  
-  .service-image {
-    width: 100px;
-    height: 100px;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    font-size: 0.9rem;
-    border-radius: 6px;
-  }
-  
-  footer {
+  .agri-intro {
+    margin: 2.5rem 0;
     text-align: center;
-    margin-top: 3rem;
+  }
+  
+  .agri-intro p {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* ===============================
+     SECTION TITLES
+     =============================== */
+  
+  .agri-section-title {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+    color: #192d4c;
+    text-align: center;
+  }
+  
+  /* ===============================
+     SERVICES
+     =============================== */
+  
+  .agri-services {
+    margin: 3.5rem 0;
+  }
+  
+  .agri-service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Service card */
+  .agri-service-item {
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch; /* makes image fill height */
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    min-height: 280px; /* INCREASED HEIGHT */
+  }
+  
+  /* 50% / 50% on large screens */
+  .agri-service-text,
+  .agri-service-image {
+    width: 50%;
+  }
+  
+  /* Text area */
+  .agri-service-text {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .agri-service-text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    color: #192d4c;
+  }
+  
+  .agri-service-text p {
+    line-height: 1.7;
+  }
+  
+  /* Image area */
+  .agri-service-image {
+    height: 240px; /* BIGGER IMAGE */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #eee;
+  }
+  
+  .agri-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* ===============================
+     RESPONSIVE (MOBILE / TABLET)
+     =============================== */
+  
+  @media (max-width: 768px) {
+    .agri-container {
+      padding: 20px;
+    }
+  
+    .agri-service-item {
+      flex-direction: column;
+      min-height: auto;
+      padding: 24px;
+    }
+  
+    .agri-service-text,
+    .agri-service-image {
+      width: 100%;
+    }
+  
+    .agri-service-text {
+      padding-right: 0;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+  
+    .agri-service-image {
+      height: 260px; /* Taller on mobile */
+    }
+  }
+  
+  /* ===============================
+     FOOTER
+     =============================== */
+  
+  .agri-footer {
+    text-align: center;
+    margin-top: 3.5rem;
     font-size: 0.9rem;
     color: #777;
+  }
+  
+  .agri-footer p {
+    margin: 0.3rem 0;
   }
   

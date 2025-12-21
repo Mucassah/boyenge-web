@@ -8,7 +8,6 @@
   
   .boyenge-container {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: var(--dark-bg);
     color: var(--text-white);
     line-height: 1.6;
   }

@@ -16,7 +16,6 @@
   }
   
   body {
-    background-color: var(--dark-bg);
     color: var(--text-light);
   }
   
@@ -44,6 +43,8 @@
     text-transform: uppercase; /* Set to uppercase */
     font-weight: 800;
     letter-spacing: 1px;
+    margin-top: 100px;
+    padding-top: 70px;
   }
   
   .est {
@@ -197,4 +198,6 @@
   }
   .hero-content h1 {
     margin-top: 70px;
+    padding-top: 70px;
+
   }
