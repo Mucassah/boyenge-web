@@ -1,6 +1,5 @@
 import React from "react";
 import "./Entertainment.css";
-import Boyengelogo from "./assets/Logo.png";
 import Muziki from "./assets/Muziki.JPG";
 import Kocha from "./assets/Kocha.JPG";
 import Runinga from "./assets/Runinga.JPG";
@@ -27,13 +26,7 @@ const Entertainment = () => {
           <h1>BOYENGE<br />ENTERTAINMENT</h1>
         </div>
 
-        <div className="logo-box">
-          <img
-            src={Boyengelogo}
-            alt="Boyenge Holdings Logo"
-            className="logo"
-          />
-        </div>
+        
       </div>
 
       <div className="cards-container">

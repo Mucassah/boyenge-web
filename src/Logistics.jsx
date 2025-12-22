@@ -2,6 +2,9 @@ import React from "react";
 import Lottie from "lottie-react";
 import logisticsAnimation from "./freezpak-logistics.json";
 import Ship from "./assets/ship.JPG";
+import Air from "./assets/Air.JPG";
+import Road from "./assets/Road.JPG";
+import Sea from "./assets/Sea.JPG";
 import './Logistics.css';
 
 const Logistics = () => {
@@ -43,7 +46,34 @@ const Logistics = () => {
                 <img src={Ship} alt="Shipping container" />
               </div>
             </div>
-            
+            <div className="logistics-methods-wrapper">
+              <h2 className="methods-title">Available Shipping Methods</h2>
+              <div className="methods-grid">
+                {/* Air Transport */}
+                <div className="method-item">
+                  <img src={Air} alt="Air Freight" />
+                  <div className="method-label">
+                    <h3>Air Transport</h3>
+                  </div>
+                </div>
+
+                {/* Road Transport */}
+                <div className="method-item">
+                  <img src={Road} alt="Road Freight" />
+                  <div className="method-label">
+                    <h3>Road Transport</h3>
+                  </div>
+                </div>
+
+                {/* Sea Transport */}
+                <div className="method-item">
+                  <img src={Sea} alt="Sea Freight" />
+                  <div className="method-label">
+                    <h3>Sea Transport</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="services-section">
               <h2 className="services-title">Our Services</h2>
               <div className="services-container">
