@@ -6,6 +6,8 @@ import './App.css';
 import Esto from "./Esto";
 import Golf from "./Golf";
 import Security from "./Security";
+import Security1 from "./Security1";
+import Security2 from "./Security2";
 import Agribusiness from "./Agribusiness";
 import Logistics from "./Logistics";
 import Consulting from "./Consulting";
@@ -24,6 +26,7 @@ import Football from "./Football";
 import Television from "./Television";
 
 
+
 function App() {
   
   return(
@@ -35,6 +38,8 @@ function App() {
             <Route path="/esto" element={<Esto />} />
             <Route path="/golf" element={<Golf/>} />
             <Route path="/security" element={<Security/>} />
+            <Route path="/security1" element={<Security1/>} />
+            <Route path="/security2" element={<Security2/>} />
             <Route path="/agribusiness" element={<Agribusiness/>} />
             <Route path="/logistics" element={<Logistics/>} />
             <Route path="/consulting" element={<Consulting/>} />

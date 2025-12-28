@@ -1,0 +1,272 @@
+/* Main container */
+.mainsecurity-container {
+    min-height: 100vh;
+    background: linear-gradient(#f4f6f8, #e9edf2);
+    padding-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Header section */
+  .mainsecurity-header {
+    background: linear-gradient(135deg, #0b2e4f, #1b4f72);
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .mainsecurity-header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .mainsecurity-header p {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.9;
+  }
+  
+  /* Core services title */
+  .core-services-title {
+    text-align: center;
+    margin: 40px 0 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  /* Services wrapper */
+  .services-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  /* Service cards */
+  .service-card {
+    width: 320px;
+    height: 180px;
+    border-radius: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Dark overlay */
+  .service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+  }
+  
+  /* Hover effect */
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Card content */
+  .service-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Card title */
+  .service-content h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #111;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .services-wrapper {
+      gap: 25px;
+    }
+  
+    .service-card {
+      width: 100%;
+      max-width: 360px;
+    }
+  }
+  
+
+  /* =========================
+   ROOT WRAPPER (ISOLATION)
+   ========================= */
+   .sec-security {
+    min-height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* =========================
+     CONTENT
+     ========================= */
+  .sec-security__content {
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  /* =========================
+     HEADER
+     ========================= */
+  .sec-security__header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .sec-security__title {
+    font-size: 2.5rem;
+    color: #192d4c;
+    margin-bottom: 6px;
+  }
+  
+  .sec-security__subtitle {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* =========================
+     INTRO
+     ========================= */
+  .sec-security__intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .sec-security__intro h2 {
+    font-size: 1.8rem;
+    color: #192d4c;
+    margin-bottom: 12px;
+  }
+  
+  .sec-security__intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  /* =========================
+     SERVICES
+     ========================= */
+  .sec-security__services-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #192d4c;
+    margin-bottom: 25px;
+  }
+  
+  .sec-security__service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+  
+  /* FULL WIDTH GUARANTEED */
+  .sec-security__service-item {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    min-height: 320px;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-left: 4px solid #192d4c;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+  }
+  
+  /* =========================
+     TEXT
+     ========================= */
+  .sec-security__service-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sec-security__service-text h4 {
+    font-size: 1.2rem;
+    color: #192d4c;
+    margin-bottom: 8px;
+  }
+  
+  .sec-security__service-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  /* =========================
+     IMAGE
+     ========================= */
+  .sec-security__service-image {
+    width: 60%;
+    min-height: 320px;
+    overflow: hidden;
+  }
+  
+  .sec-security__service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* =========================
+     FOOTER
+     ========================= */
+  .sec-security__footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* =========================
+     MOBILE
+     ========================= */
+  @media (max-width: 768px) {
+    .sec-security__service-list {
+      padding: 0 20px;
+    }
+  
+    .sec-security__service-item {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    .sec-security__service-text {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .sec-security__service-image {
+      width: 100%;
+      height: 180px;
+    }
+  }
+  

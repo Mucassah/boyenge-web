@@ -29,7 +29,7 @@ function Services(){
                         
                     </div>
                 </Link>
-                <Link className='Trade' to='Logistics'>
+                <Link className='Trade' to='/Logistics'>
                     <div className='Trade'>
                         <h2>LOGISTICS</h2>
                         
