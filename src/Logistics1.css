@@ -1,0 +1,144 @@
+/* ===============================
+   Logistics1 – Fully Scoped CSS
+================================ */
+
+.logistics1-root {
+    --primary-blue: #003366;
+    --accent-gold: #f4b41a;
+    --light-gray: #f4f6f8;
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-muted: #555555;
+  
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+  }
+  
+  /* ---------- HERO ---------- */
+  .logistics1-hero {
+    background:
+      linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)),
+      url('https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 520px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    padding: 40px 20px;
+    color: var(--white);
+  }
+  
+  .logistics1-hero-content h1 {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+  }
+  
+  .logistics1-hero-content h2 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 16px;
+  }
+  
+  .logistics1-hero-content p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #eaeaea;
+  }
+  
+  /* ---------- CTA ---------- */
+  .logistics1-cta {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    border: none;
+    padding: 14px 34px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .logistics1-cta:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+  }
+  
+  /* ---------- SERVICES ---------- */
+  .logistics1-services {
+    padding: 80px 8%;
+    background-color: var(--light-gray);
+    text-align: center;
+  }
+  
+  .logistics1-services h3 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+  }
+  
+  .logistics1-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .logistics1-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--primary-blue);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+  
+  .logistics1-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+  }
+  
+  .logistics1-card p {
+    color: var(--text-muted);
+  }
+  
+  .logistics1-card:hover {
+    transform: translateY(-6px);
+    border-top-color: var(--accent-gold);
+  }
+  
+  /* ---------- FEATURES ---------- */
+  .logistics1-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+  
+    background-color: var(--primary-blue);
+    padding: 60px 8%;
+    text-align: center;
+  }
+  
+  .logistics1-feature {
+    color: var(--white);
+  }
+  
+  .logistics1-feature strong {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+  }
+  
+  .logistics1-feature span {
+    font-size: 1rem;
+    color: #e0e0e0;
+  }
+  

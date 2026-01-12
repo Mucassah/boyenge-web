@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
 import logisticsAnimation from "./freezpak-logistics.json";
 import Ship from "./assets/ship.JPG";
 import Air from "./assets/Air.JPG";
@@ -50,28 +51,29 @@ const Logistics = () => {
               <h2 className="methods-title">Available Shipping Methods</h2>
               <div className="methods-grid">
                 {/* Air Transport */}
-                <div className="method-item">
+                <Link to="/logistics1" className="method-item">
                   <img src={Air} alt="Air Freight" />
                   <div className="method-label">
                     <h3>Air Transport</h3>
                   </div>
-                </div>
+                
+                </Link>
 
                 {/* Road Transport */}
-                <div className="method-item">
+                <Link to="/logistics2" className="method-item">
                   <img src={Road} alt="Road Freight" />
                   <div className="method-label">
                     <h3>Road Transport</h3>
                   </div>
-                </div>
+                </Link>
 
                 {/* Sea Transport */}
-                <div className="method-item">
+                <Link to="/logistics3" className="method-item">
                   <img src={Sea} alt="Sea Freight" />
                   <div className="method-label">
                     <h3>Sea Transport</h3>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
             <div className="services-section">

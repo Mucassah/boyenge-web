@@ -10,6 +10,9 @@ import Security1 from "./Security1";
 import Security2 from "./Security2";
 import Agribusiness from "./Agribusiness";
 import Logistics from "./Logistics";
+import Logistics1 from "./Logistics1";
+import Logistics2 from "./Logistics2";
+import Logistics3 from "./Logistics3";
 import Consulting from "./Consulting";
 import Insurance from "./Insurance";
 import Entertainment from "./Entertainment";
@@ -42,6 +45,9 @@ function App() {
             <Route path="/security2" element={<Security2/>} />
             <Route path="/agribusiness" element={<Agribusiness/>} />
             <Route path="/logistics" element={<Logistics/>} />
+            <Route path="/logistics1" element={<Logistics1/>} />
+            <Route path="/logistics2" element={<Logistics2/>} />
+            <Route path="/logistics3" element={<Logistics3/>} />
             <Route path="/consulting" element={<Consulting/>} />
             <Route path="/insurance" element={<Insurance/>} />
             <Route path="/entertainment" element={<Entertainment />} />
