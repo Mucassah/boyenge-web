@@ -1,169 +1,163 @@
-/* MAIN CONTAINER */
-.estate-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: rgb(230, 228, 228);
+/* Wrapper */
+.estate1-wrapper {
+  font-family: "Inter", sans-serif;
+  background: #f6f6f6;
+  color: #111;
   overflow-x: hidden;
 }
 
-/* TITLE */
-.estate-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #0b2f6a;
-  margin: 0 auto 1rem;
-  max-width: 90%;
-}
-
-/* DESCRIPTION */
-.estate-description {
-  margin: 1rem auto 2rem;
-  max-width: 700px;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* CARDS WRAPPER */
-.estate-cards {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-/* CARD */
-.estate-card {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* CARD TITLE */
-.estate-card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #0b2f6a;
-  margin-bottom: 0.5rem;
-  display: flex;
+/* Hero Section */
+.estate1-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 6%;             /* remove top/bottom padding */
+  min-height: auto;           /* height determined by image */
+  background: linear-gradient(90deg, #0f172a 50%, #ffffff 50%);
   align-items: center;
-  gap: 0.4rem;
+  overflow: visible;          /* allow image overflow */
 }
 
-/* CARD TEXT */
-.estate-card-text {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-/* BUTTON */
-.estate-btn {
-  background: #0b63d1;
+.estate1-hero-content {
   color: #fff;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  padding: 20px 0;            /* optional inner spacing */
+}
+
+.estate1-badge {
+  background: #c08457;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.estate1-hero h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.estate1-hero p {
+  max-width: 420px;
+  color: #cbd5e1;
+}
+
+/* Hero Tabs */
+.estate1-tabs {
+  margin: 30px 0;
+}
+
+.estate1-tabs button {
+  background: transparent;
+  border: 1px solid #64748b;
+  color: #fff;
+  padding: 10px 18px;
+  margin-right: 10px;
   cursor: pointer;
-  transition: 0.3s ease;
-  margin-top: 10px;
 }
 
-.estate-btn:hover {
-  background: #094fa7;
+.estate1-tabs .active {
+  background: #fff;
+  color: #0f172a;
 }
 
-/* ----------------------------------
-   TABLETS
----------------------------------- */
-@media (max-width: 768px) {
-  .estate-title {
-    font-size: 1.6rem;
+/* Hero Filters */
+.estate1-filters {
+  display: flex;
+  gap: 12px;
+}
+
+.estate1-filters select {
+  padding: 10px;
+  min-width: 120px;
+}
+
+/* Hero Image */
+.estate1-hero-image {
+  position: relative;
+}
+
+.estate1-hero-image img {
+  width: 100%;
+  max-height: none;           /* allow full image height */
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Featured Sections */
+.estate1-featured {
+  padding: 80px 6%;
+}
+
+.estate1-commercial {
+  background: #ffffff;
+}
+
+.estate1-featured h2 {
+  margin-bottom: 30px;
+}
+
+.estate1-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.estate1-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.estate1-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.estate1-card h4 {
+  margin: 14px 0;
+}
+
+.estate1-card button {
+  padding: 8px 14px;
+  background: #0f172a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Chat Button */
+.estate1-chat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #0f172a;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .estate1-hero {
+    grid-template-columns: 1fr;
+    background: #0f172a;
+    padding-top: 20px;        /* small space from top */
   }
 
-  .estate-description {
-    font-size: 0.95rem;
-  }
-
-  .estate-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .estate-card {
-    max-width: 95%;
-    text-align: center;
-  }
-
-  .estate-card-title {
-    justify-content: center;
+  .estate1-hero-image img {
+    transform: none;          /* remove overflow effect on mobile */
+    margin-top: 10px;
   }
 }
 
-/* ----------------------------------
-   MOBILE FIX — FINAL
----------------------------------- */
 @media (max-width: 480px) {
-
-  /* The universal fix: equal margins EVERYWHERE */
-  .estate-container,
-  .estate-cards,
-  .estate-card,
-  .estate-title,
-  .estate-description {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    box-sizing: border-box;
+  .estate1-hero {
+    padding-top: 20px;        /* extra breathing space */
   }
 
-  .estate-title {
-    font-size: 1.4rem;
-  }
-
-  .estate-card {
-    width: calc(100% - 2rem); /* ALWAYS leaves equal space */
-  }
-
-  .estate-card-title {
-    font-size: 1.1rem;
-    justify-content: center;
-  }
-
-  .estate-btn {
-    width: 100%;
-    max-width: 300px;
-    margin: 1rem auto 0;
-  }
-}
-/* MEDIUM SCREENS FIX (481px – 1024px) */
-@media (min-width: 481px) and (max-width: 1024px) {
-  .estate-container,
-  .estate-cards,
-  .estate-card,
-  .estate-title,
-  .estate-description {
-    padding-left: 1.2rem !important;
-    padding-right: 1.2rem !important;
-    box-sizing: border-box;
-  }
-
-  .estate-card {
-    max-width: 600px;      /* prevents stretching */
-    margin: 0 auto;        /* center the card */
-  }
-
-  .estate-cards {
-    justify-content: center;
+  .estate1-hero h1 {
+    font-size: 32px;
   }
 }

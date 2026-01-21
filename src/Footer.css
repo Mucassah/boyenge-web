@@ -1,8 +1,8 @@
 
 .Footer{
     display: flex;
-    font-size: 10px;
-    margin: 5px;
+    font-size: 8px;
+    margin: 4px;
 }
 .Footer a{
     padding: 10px;
