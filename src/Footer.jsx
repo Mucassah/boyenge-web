@@ -1,5 +1,10 @@
 import './Footer.css';
-import { FaInstagram, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
+import {
+    FaInstagram,
+    FaLinkedinIn,
+    FaXTwitter,
+    FaFacebookF
+} from 'react-icons/fa6';
 
 function Footer() {
     return (
@@ -23,7 +28,16 @@ function Footer() {
                 </a>
 
                 <a
-                    href="https://www.linkedin.com/in/nkumu-s-boyenge-a9378383?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    href="https://www.facebook.com/share/17vCM8NaMQ/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    <FaFacebookF />
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/company/boyenge-holding-s-group/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -32,7 +46,7 @@ function Footer() {
                 </a>
 
                 <a
-                    href="https://x.com/elumbe_s?s=21&t=9OiwbdlYrwFfmnX1OjAXcA"
+                    href="https://x.com/bhgroupofficiel?s=11"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="X"

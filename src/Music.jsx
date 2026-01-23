@@ -76,7 +76,7 @@ const BoyengeMusic = () => {
       </section>
 
       <footer className="footer">
-        <p>© 2025 Boyenge Music. All Rights Reserved.</p>
+        <p>Copyright © Boyenge Music. All Rights Reserved.</p>
       </footer>
     </div>
   );

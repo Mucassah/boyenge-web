@@ -1,11 +1,17 @@
 .Footer {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;          /* prevents stacking */
+    white-space: nowrap;        /* keeps links on one line */
     font-size: 8px;
     margin: 4px;
+    gap: 8px;
 }
 
 .Footer a {
-    padding: 10px;
+    padding: 6px;
 }
 
 .Footer a:hover {
@@ -15,6 +21,7 @@
 .FooterSocials {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 16px;
     margin: 8px 0;
 }
@@ -28,9 +35,5 @@
     color: rgb(198, 143, 67);
 }
 
-@media (max-width: 600px) {
-    .Footer {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+/* ❌ Removed column layout on small screens */
+/* Footer stays horizontal on all screen sizes */
