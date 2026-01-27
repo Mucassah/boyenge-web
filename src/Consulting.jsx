@@ -1,51 +1,52 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Consulting.css";
 import heroImage from "./assets/hero-image.JPG";
-import person1 from "./assets/person1.jpg";
-import person2 from "./assets/person2.jpg";
-import chessDark from "./assets/chess-dark.JPG";
-import chessLight from "./assets/chess-light.JPG";
 
 function Consulting() {
-  const testimonials = [
+  const sectors = [
     {
-      text: `“Before working with Boyenge consulting team, I had hired various consultants and it was always chaotic. 
-      With Boyenge Consulting, I now have an expert who takes care of everything 100%. Perfect!”`,
-      name: "Sebastian Szalinski",
-      title: "CEO IRON Media GmbH",
-      image: person1,
-      chess: chessDark,
+      title: "Real Estate",
+      description:
+        "Navigating the complexities of property acquisition, urban development, and investment management. We provide data-driven insights to maximize your portfolio's value.",
+      image: "/images/real-estate.jpg",
     },
     {
-      text: `"With Boyenge Consulting, my finances are in the best of hands and I can focus fully on my business, which is also well insured."`,
-      name: "Maruan Faraj",
-      title: "CEO Finally Freelancing GmbH",
-      image: person2,
-      chess: chessLight,
+      title: "Security",
+      description:
+        "Comprehensive risk assessment and strategic security consulting. We specialize in protecting assets, personnel, and infrastructure through innovative technology.",
+      image: "/images/security.jpg",
+    },
+    {
+      title: "Agribusiness",
+      description:
+        "Modernizing the agricultural value chain. From sustainable farming practices to supply chain optimization, we help scale agribusiness operations.",
+      image: "/images/agribusiness.jpg",
+    },
+    {
+      title: "Mining",
+      description:
+        "Expert guidance in mineral exploration, regulatory compliance, and sustainable extraction. We bridge the gap between resource potential and operational excellence.",
+      image: "/images/mining.jpg",
+    },
+    {
+      title: "Insurance",
+      description:
+        "Strategic risk management and insurance advisory. We help clients navigate complex policy landscapes and secure robust coverage tailored to corporate needs.",
+      image: "/images/insurance.jpg",
+    },
+    {
+      title: "Logistics",
+      description:
+        "Streamlining global supply chains through efficient distribution strategies and freight management.",
+      image: "/images/logistics.jpg",
+    },
+    {
+      title: "Entertainment",
+      description:
+        "Consulting for the evolving media landscape, including production, talent management, and digital distribution.",
+      image: "/images/entertainment.jpg",
     },
   ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [rotation, setRotation] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
-
-      const scrollProgress = Math.max(0, scrollY - viewportHeight * 0.8);
-      const sectionLength = viewportHeight * 1.5; 
-      const newIndex = Math.floor(scrollProgress / sectionLength) % testimonials.length;
-
-      setCurrentIndex(newIndex);
-      setRotation((scrollY / 5) % 360);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const t = testimonials[currentIndex];
 
   return (
     <div>
@@ -55,75 +56,59 @@ function Consulting() {
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="overlay"></div>
+
         <div className="hero-content">
           <h1 className="hero-title">
-            BOYENGE CONSULTING<br />
+            BOYENGE CONSULTING
+            <br />
             <span>Fast. Digital. Competent.</span>
           </h1>
+
           <p className="hero-subtitle">
-            Over <strong>700 satisfied customers</strong> are no coincidence — we offer
-            all round and indepth analysis in different sectors of the economy.
+            Over <strong>700 satisfied customers</strong> are no coincidence — we
+            offer all round and indepth analysis in different sectors of the
+            economy.
           </p>
+
           <a href="mailto:consulting@boyenge.com" className="cta-button">
             Book a call
           </a>
         </div>
       </section>
 
-      {/* ===== TESTIMONIAL SECTION ===== */}
-      <div className="testimonials-section">
-        <div className="testimonials-content">
-          <h2 className="testimonials-heading">
-            What top <br />
-            entrepreneurs say <br />
-            about our work
-          </h2>
+      {/* ===== SECTORS SECTION ===== */}
+      <section className="sectors-section">
+        <div className="sectors-header">
+          <h2>Our Expertise</h2>
+          <div className="sectors-divider"></div>
+        </div>
 
-          <p className="testimonial-text fade">{t.text}</p>
+        <div className="sectors-list">
+          {sectors.map((sector, index) => (
+            <div
+              key={index}
+              className={`sector-item ${
+                index % 2 !== 0 ? "sector-reverse" : ""
+              }`}
+            >
+              <div className="sector-content">
+                <h3>{sector.title}</h3>
+                <p>"{sector.description}"</p>
+              </div>
 
-          <div className="testimonial-author">
-            <img src={t.image} alt={t.name} className="author-img" />
-            <div>
-              <p className="author-name">{t.name}</p>
-              <p className="author-title">{t.title}</p>
+              <div className="sector-media">
+                <img
+                  src={sector.image}
+                  alt={sector.title}
+                  onError={(e) => {
+                    e.target.src = `https://via.placeholder.com/800x600?text=${sector.title}`;
+                  }}
+                />
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-
-        <div className="testimonials-image">
-          <img
-            src={t.chess}
-            alt="chess piece"
-            className="chess-piece"
-            style={{ transform: `rotate(-${rotation}deg)` }}
-          />
-        </div>
-      </div>
-
-      {/* ===== STATIC CHESS IMAGE SECTIONS ===== */}
-      <div className="scroll-chess-container">
-        <div className="chess-section">
-          <div className="text">
-            <h2>Strategic Insights</h2>
-            <p>
-              Our team provides deep strategic insights into market trends
-              and business opportunities to ensure sustainable growth.
-            </p>
-          </div>
-          <img src={chessDark} alt="chess" className="chess-image" />
-        </div>
-
-        <div className="chess-section reverse">
-          <div className="text">
-            <h2>Tailored Solutions</h2>
-            <p>
-              Every business is unique. We craft solutions specifically for
-              your goals and challenges.
-            </p>
-          </div>
-          <img src={chessLight} alt="chess" className="chess-image" />
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

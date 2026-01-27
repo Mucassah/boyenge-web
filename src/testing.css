@@ -1,12 +1,231 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  box-sizing: border-box;
+}
 
-.Footer{
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero-section {
+  position: relative;
   display: flex;
-  font-size: 8px;
-  margin: 4px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+  padding: 2rem 1rem;
 }
-.Footer a{
-  padding: 10px;
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
 }
-.Footer a:hover{
-  color: rgb(198, 143, 67);
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-title span {
+  display: block;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: #e5e5e5;
+  margin-bottom: 0;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* CTA BUTTON — FORCED BELOW PARAGRAPH */
+.cta-button {
+  display: inline-block;
+  margin-top: 1.75rem;
+  background-color: #ff7a00;
+  color: white;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #e56d00;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   TESTIMONIALS SECTION
+===================== */
+.testimonials-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d0d0d;
+  color: white;
+  padding: clamp(3rem, 8vw, 5rem) 8%;
+  gap: 3rem;
+}
+
+.testimonials-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.testimonials-heading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #b5b5b5;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.author-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.author-name {
+  font-weight: 600;
+}
+
+.author-title {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.testimonials-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.chess-piece {
+  width: min(320px, 70%);
+  transition: transform 1.2s ease-out;
+  opacity: 0.9;
+}
+
+/* =====================
+   CHESS INFO SECTIONS
+===================== */
+.scroll-chess-container {
+  background-color: #0a0a0a;
+  color: #ccc;
+  overflow-x: hidden;
+}
+
+.chess-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(3rem, 6vw, 4.5rem) 8%;
+  gap: 3rem;
+}
+
+.chess-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  max-width: 520px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.text h2 {
+  color: white;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.chess-image {
+  width: 140px;
+}
+
+/* =====================
+   TABLET (≤ 900px)
+===================== */
+@media (max-width: 900px) {
+  .testimonials-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-author {
+    justify-content: center;
+  }
+
+  .chess-section,
+  .chess-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+
+  .chess-image {
+    width: 120px;
+  }
+}
+
+/* =====================
+   MOBILE (≤ 480px)
+===================== */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .chess-piece {
+    width: 220px;
+  }
 }
