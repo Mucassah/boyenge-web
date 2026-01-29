@@ -52,26 +52,37 @@ const Logistics = () => {
               <div className="methods-grid">
                 {/* Air Transport */}
                 <Link to="/logistics1" className="method-item">
-                  <img src={Air} alt="Air Freight" />
                   <div className="method-label">
                     <h3>Air Transport</h3>
                   </div>
-                
+                  <img src={Air} alt="Air Freight" />
+                  {/* Added button */}
+                  <div className="method-action">
+                    <button className="method-btn">Read More</button>
+                  </div>
                 </Link>
 
                 {/* Road Transport */}
                 <Link to="/logistics2" className="method-item">
-                  <img src={Road} alt="Road Freight" />
                   <div className="method-label">
                     <h3>Road Transport</h3>
+                  </div>
+                  <img src={Road} alt="Road Freight" />
+                  {/* Added button */}
+                  <div className="method-action">
+                    <button className="method-btn">Read More</button>
                   </div>
                 </Link>
 
                 {/* Sea Transport */}
                 <Link to="/logistics3" className="method-item">
-                  <img src={Sea} alt="Sea Freight" />
                   <div className="method-label">
                     <h3>Sea Transport</h3>
+                  </div>
+                  <img src={Sea} alt="Sea Freight" />
+                  {/* Added button */}
+                  <div className="method-action">
+                    <button className="method-btn">Read More</button>
                   </div>
                 </Link>
               </div>

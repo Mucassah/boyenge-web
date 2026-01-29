@@ -2,49 +2,60 @@ import React from "react";
 import "./Consulting.css";
 import heroImage from "./assets/hero-image.JPG";
 
+import home1 from "./assets/home1.JPG";
+import privateBg from "./assets/private-army.jpg";
+import cropproduction from "./assets/cropproduction.JPG";
+import Insurancepic from "./assets/Insurancepic.JPG";
+import Air from "./assets/Air.JPG";
+import Muziki from "./assets/Muziki.JPG";
+import Mining from "./assets/Mining.JPG";
+
+
+
+
 function Consulting() {
   const sectors = [
     {
       title: "Real Estate",
       description:
         "Navigating the complexities of property acquisition, urban development, and investment management. We provide data-driven insights to maximize your portfolio's value.",
-      image: "/images/real-estate.jpg",
+      image: home1 ,
     },
     {
       title: "Security",
       description:
         "Comprehensive risk assessment and strategic security consulting. We specialize in protecting assets, personnel, and infrastructure through innovative technology.",
-      image: "/images/security.jpg",
+      image: privateBg ,
     },
     {
       title: "Agribusiness",
       description:
         "Modernizing the agricultural value chain. From sustainable farming practices to supply chain optimization, we help scale agribusiness operations.",
-      image: "/images/agribusiness.jpg",
+      image: cropproduction,
     },
     {
       title: "Mining",
       description:
         "Expert guidance in mineral exploration, regulatory compliance, and sustainable extraction. We bridge the gap between resource potential and operational excellence.",
-      image: "/images/mining.jpg",
+      image: Mining ,
     },
     {
       title: "Insurance",
       description:
         "Strategic risk management and insurance advisory. We help clients navigate complex policy landscapes and secure robust coverage tailored to corporate needs.",
-      image: "/images/insurance.jpg",
+      image: Insurancepic,
     },
     {
       title: "Logistics",
       description:
         "Streamlining global supply chains through efficient distribution strategies and freight management.",
-      image: "/images/logistics.jpg",
+      image: Air,
     },
     {
       title: "Entertainment",
       description:
         "Consulting for the evolving media landscape, including production, talent management, and digital distribution.",
-      image: "/images/entertainment.jpg",
+      image: Muziki ,
     },
   ];
 

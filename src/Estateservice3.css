@@ -1,6 +1,10 @@
-/* Container */
-.estate-container {
+/* =========================
+   Root / Mother Container
+   ========================= */
+   .es3 {
     width: 100%;
+    max-width: 1400px;      /* centers the whole section */
+    margin: 0 auto;
     background: #e8eff3;
     padding: 4rem 1.5rem;
     display: flex;
@@ -8,27 +12,31 @@
     align-items: center;
   }
   
-  /* Header */
-  .estate-header {
+  /* =========================
+     Header
+     ========================= */
+  .es3-header {
     max-width: 700px;
     text-align: center;
     margin-bottom: 3rem;
   }
   
-  .estate-header h1 {
+  .es3-title {
     font-size: 2.2rem;
     color: #0b3d3a;
     font-weight: 700;
   }
   
-  .estate-header p {
+  .es3-subtitle {
     font-size: 1rem;
     color: #5f6f75;
     margin-top: 0.75rem;
   }
   
-  /* Grid */
-  .estate-grid {
+  /* =========================
+     Grid
+     ========================= */
+  .es3-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -37,19 +45,21 @@
   }
   
   @media (min-width: 640px) {
-    .estate-grid {
+    .es3-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
   @media (min-width: 1024px) {
-    .estate-grid {
+    .es3-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
-  /* Cards */
-  .estate-card {
+  /* =========================
+     Cards
+     ========================= */
+  .es3-card {
     background: #ffffff;
     padding: 2rem 1.5rem;
     border-radius: 14px;
@@ -57,29 +67,25 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   }
   
-  .estate-card img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 1rem;
-  }
-  
-  .estate-card h3 {
+  .es3-card-title {
     font-size: 1.1rem;
     font-weight: 600;
     color: #0b3d3a;
   }
   
-  .estate-card p {
+  .es3-card-text {
     margin-top: 0.5rem;
     color: #6d7a7f;
     font-size: 0.95rem;
   }
   
-  /* Button */
-  .estate-button {
+  /* =========================
+     Button
+     ========================= */
+  .es3-button {
     margin-top: 3rem;
     background: #ff6d3b;
-    color: #fff;
+    color: #ffffff;
     border: none;
     padding: 0.9rem 2rem;
     border-radius: 10px;
@@ -89,7 +95,15 @@
     transition: background 0.3s ease;
   }
   
-  .estate-button:hover {
+  .es3-button:hover {
     background: #e85c2e;
+  }
+  
+  /* =========================
+     Optional Safety Reset
+     (prevents aggressive global CSS)
+     ========================= */
+  .es3 * {
+    box-sizing: border-box;
   }
   

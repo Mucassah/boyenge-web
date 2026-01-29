@@ -3,37 +3,39 @@ import "./Estateservice3.css";
 
 export default function EstateService3() {
   return (
-    <div className="estate-container">
+    <div className="es3 estate-container">
       {/* Header */}
-      <div className="estate-header">
-        <h1>Land Acquisition & Leasing</h1>
-        <p>
+      <div className="es3-header">
+        <h1 className="es3-title">Land Acquisition & Leasing</h1>
+        <p className="es3-subtitle">
           We specialize on connecting our clients with the ideal land
           opportunities...
         </p>
       </div>
 
       {/* Service Cards */}
-      <div className="estate-grid">
-        <div className="estate-card">
-          <h3>Strategic Land Sourcing</h3>
-          <p>Identifying prime parcels...</p>
+      <div className="es3-grid">
+        <div className="es3-card">
+          <h3 className="es3-card-title">Strategic Land Sourcing</h3>
+          <p className="es3-card-text">Identifying prime parcels...</p>
         </div>
 
-        <div className="estate-card">
-          <h3>Negotiation & Acquisition</h3>
-          <p>Expert negotiation services...</p>
+        <div className="es3-card">
+          <h3 className="es3-card-title">Negotiation & Acquisition</h3>
+          <p className="es3-card-text">Expert negotiation services...</p>
         </div>
 
-        <div className="estate-card">
-          <h3>Lease Management & Renewal</h3>
-          <p>Comprehensive management of land leases.</p>
+        <div className="es3-card">
+          <h3 className="es3-card-title">Lease Management & Renewal</h3>
+          <p className="es3-card-text">
+            Comprehensive management of land leases.
+          </p>
         </div>
       </div>
 
       {/* CTA Button */}
       <a href="mailto:realestate@boyenge.com">
-      <button className="estate-button">Consult Our Land Experts</button>
+        <button className="es3-button">Consult Our Land Experts</button>
       </a>
     </div>
   );

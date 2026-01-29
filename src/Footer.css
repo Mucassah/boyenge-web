@@ -1,23 +1,30 @@
-.Footer {
+/* =========================
+   Base styles (Mobile first)
+   ========================= */
+
+   .Footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;          /* prevents stacking */
-    white-space: nowrap;        /* keeps links on one line */
-    font-size: 8px;
+    flex-wrap: nowrap;          /* keeps footer in one line */
+    white-space: nowrap;
+    font-size: 8px;             /* mobile size */
     margin: 4px;
     gap: 8px;
 }
 
 .Footer a {
     padding: 6px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .Footer a:hover {
     color: rgb(198, 143, 67);
 }
 
+/* Social Media Icons */
 .FooterSocials {
     display: flex;
     justify-content: center;
@@ -27,7 +34,7 @@
 }
 
 .FooterSocials a {
-    font-size: 14px;
+    font-size: 14px;            /* mobile icon size */
     color: inherit;
 }
 
@@ -35,5 +42,51 @@
     color: rgb(198, 143, 67);
 }
 
-/* ❌ Removed column layout on small screens */
-/* Footer stays horizontal on all screen sizes */
+/* =========================
+   Tablets
+   ========================= */
+
+@media (min-width: 768px) {
+    .Footer {
+        font-size: 12px;
+        gap: 12px;
+        margin: 6px;
+    }
+
+    .Footer a {
+        padding: 8px;
+    }
+
+    .FooterSocials {
+        gap: 20px;
+    }
+
+    .FooterSocials a {
+        font-size: 18px;
+    }
+}
+
+/* =========================
+   Large screens / Desktops
+   ========================= */
+
+@media (min-width: 1200px) {
+    .Footer {
+        font-size: 14px;
+        gap: 16px;
+        margin: 8px;
+    }
+
+    .Footer a {
+        padding: 10px;
+    }
+
+    .FooterSocials {
+        gap: 24px;
+        margin: 12px 0;
+    }
+
+    .FooterSocials a {
+        font-size: 22px;
+    }
+}
