@@ -1,6 +1,3 @@
-
-
-
 import React from "react";
 import "./Security2.css";
 import privatesec from "./assets/Privatesecurity.JPG";
@@ -50,7 +47,7 @@ function Security() {
               </div>
             </div>
 
-            <div className="sec-security__service-item">
+            <div className="sec-security__service-item sec-security__service-item--reverse">
               <div className="sec-security__service-text">
                 <h4>CCTV Installation & Monitoring</h4>
                 <p>
@@ -76,7 +73,7 @@ function Security() {
               </div>
             </div>
 
-            <div className="sec-security__service-item">
+            <div className="sec-security__service-item sec-security__service-item--reverse">
               <div className="sec-security__service-text">
                 <h4>Risk Assessment & Security Audits</h4>
                 <p>

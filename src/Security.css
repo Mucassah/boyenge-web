@@ -1,103 +1,332 @@
-/* Main container */
-.mainsecurity-container {
+/* ================= MAIN ================= */
+.sec-main-container {
   min-height: 100vh;
   background: linear-gradient(#f4f6f8, #e9edf2);
   padding-bottom: 60px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Header section */
-.mainsecurity-header {
-  background: linear-gradient(135deg, #0b2e4f, #1b4f72);
-  color: #ffffff;
-  text-align: center;
-  padding: 50px 20px;
+/* ================= HERO ================= */
+.sec-hero {
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 60px;
 }
 
-.mainsecurity-header h1 {
+.sec-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.25)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px;
+}
+
+.sec-hero-content {
+  text-align: right;
+  white-space: nowrap; /* Keep "WE SECURE." on a single line */
+}
+
+.sec-hero-content h2 {
   margin: 0;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 80px;
+  font-weight: 900;
+  color: #f5c542;
 }
 
-.mainsecurity-header p {
+.sec-hero-content p {
   margin-top: 10px;
-  font-size: 16px;
-  opacity: 0.9;
+  font-size: 18px;
+  color: #fff;
 }
 
-/* Core services title */
-.core-services-title {
+/* ================= ABOUT SECTION ================= */
+.sec-about-container {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.sec-about-content {
+  flex: 1;
+}
+
+.sec-about-subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.sec-about-subtitle::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #f5c542;
+  margin-top: 6px;
+}
+
+.sec-about-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 15px 0;
+  color: #111;
+}
+
+.sec-about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.sec-about-btn {
+  padding: 12px 30px;
+  background: #f5c542;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sec-about-btn:hover {
+  background: #e0b233;
+}
+
+.sec-about-image-wrapper {
+  flex: 1;
+}
+
+.sec-about-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ================= CORE SERVICES ================= */
+.sec-core-services-title {
   text-align: center;
   margin: 40px 0 30px;
   font-size: 24px;
   font-weight: 600;
-  color: #222;
+  color: #000; /* Black color for core services */
 }
 
-/* Services wrapper */
-.services-wrapper {
+.sec-services-wrapper {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  padding: 0 20px;
 }
 
-/* Service cards */
-.service-cardmain {
+/* ================= SERVICE CARD ================= */
+.sec-service-item {
+  position: relative;
   width: 500px;
   height: 350px;
   border-radius: 14px;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Dark overlay */
-.service-card::after {
-  content: "";
+.sec-service-item:hover {
+  transform: translateY(-4px);
+}
+
+.sec-service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+/* Blur background on hover */
+.sec-service-item:hover .sec-service-image {
+  filter: blur(4px);
+}
+
+.sec-service-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
 }
 
-/* Hover effect */
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
-}
-
-/* Card content */
-.service-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 20px;
+.sec-service-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2;
+  color: #fff;
+  padding: 0 20px;
 }
 
-/* Card title */
-.service-content h3 {
-  margin: 0;
+.sec-service-label h3 {
+  margin: 0 0 10px 0;
   font-size: 22px;
-  font-weight: 600;
-  color: #111;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .services-wrapper {
-    gap: 25px;
+.sec-service-description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.sec-service-item:hover .sec-service-description {
+  opacity: 1;
+  max-height: 200px;
+}
+
+.sec-service-action {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.sec-service-btn {
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #f5c542;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sec-service-btn:hover {
+  background: rgba(245, 197, 66, 0.25);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .sec-about-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .service-card {
+  .sec-about-subtitle::after {
+    margin: 6px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-hero {
+    height: 480px;
+  }
+
+  .sec-hero-content h2 {
+    font-size: 52px;
+  }
+
+  .sec-service-item {
     width: 100%;
     max-width: 360px;
+  }
+
+  .sec-service-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-about-title {
+    font-size: 26px;
+  }
+
+  .sec-about-text {
+    font-size: 15px;
+  }
+
+  .sec-service-description {
+    font-size: 12px;
+  }
+}
+
+/* ================= BOYENGE CONTACT SECTION ================= */
+.boyenge-contact-section {
+  width: 100%;
+  margin-top: 80px;
+  padding: 70px 20px;
+  background: linear-gradient(to bottom, rgba(25, 45, 76, 1), rgba(0, 1, 1, 1));
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.boyenge-contact-email {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.boyenge-contact-email span {
+  color: #f5c542;
+  font-weight: 700;
+}
+
+.boyenge-contact-addresses {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boyenge-address-card {
+  flex: 1;
+  min-width: 220px;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.boyenge-address-card h4 {
+  margin-bottom: 10px;
+  color: #f5c542;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.boyenge-address-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d6d6d6;
+}
+
+@media (max-width: 768px) {
+  .boyenge-contact-addresses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boyenge-address-card {
+    max-width: 100%;
   }
 }

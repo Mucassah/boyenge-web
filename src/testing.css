@@ -1,231 +1,103 @@
-/* =====================
-   GLOBAL RESET
-===================== */
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* =====================
-   HERO SECTION
-===================== */
-.hero-section {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
+/* Main container */
+.mainsecurity-container {
   min-height: 100vh;
-  color: white;
-  padding: 2rem 1rem;
+  background: linear-gradient(#f4f6f8, #e9edf2);
+  padding-bottom: 60px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.55);
+/* Header section */
+.mainsecurity-header {
+  background: linear-gradient(135deg, #0b2e4f, #1b4f72);
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.hero-title span {
-  display: block;
-  font-size: clamp(1.5rem, 4vw, 2.4rem);
+.mainsecurity-header h1 {
+  margin: 0;
+  font-size: 36px;
   font-weight: 700;
 }
 
-.hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.15rem);
-  color: #e5e5e5;
-  margin-bottom: 0;
-  line-height: 1.6;
-  max-width: 700px;
-}
-
-/* CTA BUTTON — FORCED BELOW PARAGRAPH */
-.cta-button {
-  display: inline-block;
-  margin-top: 1.75rem;
-  background-color: #ff7a00;
-  color: white;
-  padding: 0.75rem 1.8rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  background-color: #e56d00;
-  transform: translateY(-2px);
-}
-
-/* =====================
-   TESTIMONIALS SECTION
-===================== */
-.testimonials-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #0d0d0d;
-  color: white;
-  padding: clamp(3rem, 8vw, 5rem) 8%;
-  gap: 3rem;
-}
-
-.testimonials-content {
-  flex: 1;
-  max-width: 600px;
-}
-
-.testimonials-heading {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 1.5rem;
-}
-
-.testimonial-text {
-  font-size: 1rem;
-  color: #b5b5b5;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.author-img {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  object-fit: cover;
-}
-
-.author-name {
-  font-weight: 600;
-}
-
-.author-title {
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-.testimonials-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.chess-piece {
-  width: min(320px, 70%);
-  transition: transform 1.2s ease-out;
+.mainsecurity-header p {
+  margin-top: 10px;
+  font-size: 16px;
   opacity: 0.9;
 }
 
-/* =====================
-   CHESS INFO SECTIONS
-===================== */
-.scroll-chess-container {
-  background-color: #0a0a0a;
-  color: #ccc;
-  overflow-x: hidden;
+/* Core services title */
+.core-services-title {
+  text-align: center;
+  margin: 40px 0 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
 }
 
-.chess-section {
+/* Services wrapper */
+.services-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: clamp(3rem, 6vw, 4.5rem) 8%;
-  gap: 3rem;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
-.chess-section.reverse {
-  flex-direction: row-reverse;
+/* Service cards */
+.service-cardmain {
+  width: 500px;
+  height: 350px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.text {
-  max-width: 520px;
-  font-size: 1.05rem;
-  line-height: 1.7;
+/* Dark overlay */
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
 }
 
-.text h2 {
-  color: white;
-  margin-bottom: 0.8rem;
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
 }
 
-.chess-image {
-  width: 140px;
+/* Card content */
+.service-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
-/* =====================
-   TABLET (≤ 900px)
-===================== */
-@media (max-width: 900px) {
-  .testimonials-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .testimonial-author {
-    justify-content: center;
-  }
-
-  .chess-section,
-  .chess-section.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text {
-    max-width: 100%;
-  }
-
-  .chess-image {
-    width: 120px;
-  }
+/* Card title */
+.service-content h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
 }
 
-/* =====================
-   MOBILE (≤ 480px)
-===================== */
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 2rem 1rem;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-wrapper {
+    gap: 25px;
   }
 
-  .cta-button {
+  .service-card {
     width: 100%;
-    max-width: 260px;
-  }
-
-  .chess-piece {
-    width: 220px;
+    max-width: 360px;
   }
 }
