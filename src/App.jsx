@@ -27,6 +27,8 @@ import Insure4 from "./Insure4";
 import Music from "./Music";
 import Football from "./Football";
 import Television from "./Television";
+import Tracking from "./pages/Tracking";
+
 
 
 
@@ -62,6 +64,8 @@ function App() {
             <Route path="/music" element={<Music />} />
             <Route path="/football" element={<Football />} />
             <Route path="/television" element={<Television />} />
+            <Route path="/track" element={<Tracking />} />
+
             
 
 

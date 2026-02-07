@@ -1,0 +1,51 @@
+.tracking-container {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .tracking-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tracking-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tracking-input input {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  .tracking-input button {
+    padding: 12px 24px;
+    background: #004488;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tracking-input button:hover {
+    opacity: 0.9;
+  }
+  
+  .tracking-error {
+    color: red;
+    margin-top: 1rem;
+  }
+  
+  .tracking-result {
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+  }
+  
+  .tracking-result ul {
+    margin-top: 1rem;
+    padding-left: 20px;
+  }
+  

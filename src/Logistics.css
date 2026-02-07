@@ -8,7 +8,7 @@
 .home-fold__video {
   position: relative;
   width: 100%;
-  height: 100vh; /* full viewport height */
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -22,12 +22,10 @@
 /* H1 on top of video */
 .home-fold__title {
   position: absolute;
-  top: 50%;
-  left: 50px; /* padding from left */
+  top: 45%;
+  left: 50px;
   transform: translateY(-50%);
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
   z-index: 2;
   line-height: 1.2;
   font-size: 5rem;
@@ -37,30 +35,60 @@
 /* Make both spans same width */
 .home-fold__title span {
   display: inline-block;
-  width: 100%; /* same width for both lines */
+  width: 100%;
   text-align: left;
 }
 
 /* BOYENGE */
 .home-fold__title span:first-child {
-  font-size: 5rem; /* bigger */
+  font-size: 5rem;
 }
 
 /* LOGISTICS */
 .home-fold__title span:last-child {
-  font-size: 5rem; /* smaller under BOYENGE */
+  font-size: 5rem;
   margin-top: 0.5rem;
+}
+
+/* ===== TRACK CARGO BUTTON ===== */
+.track-btn-wrapper {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-decoration: none;
+  width: max-content;
+}
+
+.track-btn-wrapper .track-btn {
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  border: 3px solid #c40000;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.track-btn-wrapper .track-btn:hover {
+  background: #c40000;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(196, 0, 0, 0.35);
 }
 
 /* About-us container side by side */
 .about-us {
   display: flex;
-  gap: 2rem; /* spacing between divs */
+  gap: 2rem;
   align-items: flex-start;
   margin-top: 3rem;
   margin-left: 5rem;
   margin-right: 5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* About-us text */
@@ -70,7 +98,7 @@
 
 /* Make first paragraph bigger */
 .about-us p:first-of-type {
-  font-size: 3rem; /* slightly bigger */
+  font-size: 3rem;
   font-weight: 1000;
   line-height: 1;
   color: rgba(186, 21, 21, 0.827);
@@ -81,20 +109,20 @@
   flex: 1;
 }
 
-/* Ensure image fits nicely with small border radius */
+/* Ensure image fits nicely */
 .about-us img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 8px; /* small rounded corners */
+  border-radius: 8px;
 }
+
+/* ===== SERVICES SECTION ===== */
 .services-section {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  font-family: 'Inter', sans-serif;
   padding: 2rem 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .services-title {
@@ -126,8 +154,8 @@
   margin: 0;
   flex: 1;
   color: #000;
-  
 }
+
 .service-info {
   flex: 2;
   font-size: 1rem;
@@ -141,13 +169,13 @@
 
 /* Hover effects */
 .service-item:hover {
-  background-color: #0b2341; /* dark blue from your screenshot */
+  background-color: #0b2341;
   color: #fff;
 }
-.service-item:hover h3{
+
+.service-item:hover h3 {
   color: white;
 }
-
 
 .service-item:hover .service-info {
   opacity: 1;
@@ -155,41 +183,174 @@
   margin-left: 2rem;
 }
 
-/* Responsive adjustments */
+/* ===== LOGISTICS METHODS ===== */
+.logistics-methods-wrapper {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.methods-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.methods-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.method-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.method-item:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.method-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.method-label {
+  padding: 15px;
+  text-align: center;
+}
+
+.method-label h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #004488;
+}
+
+/* ===== METHOD BUTTONS (BLUE) ===== */
+.method-action {
+  padding: 15px;
+  text-align: center;
+}
+
+.method-btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 2px solid #004488;
+  background: transparent;
+  color: #004488;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.method-btn:hover {
+  background: #004488;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 68, 136, 0.3);
+}
+
+.method-item:hover .method-btn {
+  background: #004488;
+  color: #fff;
+}
+
+/* ===== BOYENGE CONTACT SECTION ===== */
+.boyenge-contact-section {
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.boyenge-contact-section .contact-email {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #004488;
+}
+
+.boyenge-contact-section .contact-email a {
+  color: #c40000;
+  text-decoration: none;
+}
+
+.boyenge-contact-section .contact-email a:hover {
+  text-decoration: underline;
+}
+
+.boyenge-contact-section .contact-locations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.boyenge-contact-section .location-item {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.boyenge-contact-section .location-item h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #004488;
+  font-size: 1.25rem;
+}
+
+.boyenge-contact-section .location-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .home-fold__video {
-      height: 60vh;
-    }
-
-  .about-us {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    align-items: center;
-    text-align: center;
-    margin-top: 0%;
+    height: 60vh;
   }
 
   .home-fold__title {
-    left: 0%; 
-    transform: translateY(-50%); 
-    line-height: 0.5;
-    text-align: left;
-    position: absolute;
+    top: 40%;
+    line-height: 1;
   }
 
-  .home-fold__title span:first-child {
-    font-size: 3rem;
+  .track-btn-wrapper {
+    top: 60%;
   }
 
+  .home-fold__title span:first-child,
   .home-fold__title span:last-child {
     font-size: 3rem;
+  }
+
+  .track-btn-wrapper .track-btn {
+    font-size: 1rem;
+    padding: 14px 36px;
+  }
+
+  .about-us {
+    flex-direction: column;
+    margin: 1rem;
+    align-items: center;
+    text-align: center;
   }
 
   .about-us p:first-of-type {
     font-size: 1.1rem;
   }
+
   .service-item {
     flex-direction: column;
     align-items: flex-start;
@@ -203,108 +364,40 @@
   .service-item h3 {
     font-size: 1.4rem;
   }
-  
+
+  .boyenge-contact-section .contact-locations {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boyenge-contact-section .location-item {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
-/* Container padding */
-.logistics-methods-wrapper {
-padding: 2rem;
-width: 100%;
-box-sizing: border-box;
-}
-
-/* Header styling */
-.methods-title {
-text-align: center;
-font-family: sans-serif;
-margin-bottom: 2rem;
-color: white;
-}
-
-/* The Responsive Grid */
-.methods-grid {
-display: grid;
-gap: 20px;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-max-width: 1200px;
-margin: 0 auto;
-}
-
-/* Individual Method Items */
-.method-item {
-border: 1px solid #ddd;
-border-radius: 8px;
-overflow: hidden;
-background: #fff;
-transition: box-shadow 0.3s ease;
-}
-
-.method-item:hover {
-box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-
-.method-item img {
-width: 100%;
-height: 200px;
-object-fit: cover;
-display: block;
-}
-
-.method-label {
-padding: 15px;
-text-align: center;
-}
-
-.method-label h3 {
-margin: 0;
-font-size: 1.25rem;
-color: #004488;
-font-family: sans-serif;
-}
-
-/* ===== BUTTON FOR METHOD ITEMS ===== */
-.method-action {
-padding: 15px;
-text-align: center;
-}
-
-.method-btn {
-padding: 10px 24px;
-border-radius: 30px;
-border: 2px solid #004488;
-background: transparent;
-color: #004488;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.method-btn:hover {
-background: #004488;
-color: #fff;
-box-shadow: 0 6px 12px rgba(0, 68, 136, 0.3);
-}
-
-.method-item:hover .method-btn {
-background: #004488;
-color: #fff;
-}
-
-/* Responsive adjustments for mobile */
 @media (max-width: 480px) {
   .home-fold__video {
-      height: 50vh;
-    }
-
-  .home-fold__title span:first-child {
-    font-size: 2.5rem;
-  }
-  .about-us{
-    margin-top: 0%;
+    height: 50vh;
   }
 
+  .home-fold__title {
+    top: 25%;
+    line-height: 0.80;
+  }
+
+  .track-btn-wrapper {
+    top: 62%;
+  }
+
+  .home-fold__title span:first-child,
   .home-fold__title span:last-child {
     font-size: 2.5rem;
+  }
+
+  .track-btn-wrapper .track-btn {
+    font-size: 0.95rem;
+    padding: 12px 28px;
   }
 
   .about-us p:first-of-type {
