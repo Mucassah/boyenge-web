@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
-import backVideo from "./assets/realesto.webm"; 
-import Estologo from "./assets/Estologo.png";
-import './Esto.css';
+import { Link } from "react-router-dom";
+import backVideo from "./assets/realesto.webm";
+import "./Esto.css";
 
 function Esto() {
   return (
@@ -19,33 +18,44 @@ function Esto() {
       <h3>REAL ESTATE SERVICES</h3>
 
       <div className="service">
-
         <Link to="/estateservice1" className="service-link">
-          <div>
-            <h5>RESIDENTIAL<br /> AND <br />COMMERCIAL SALE</h5>
+          <div className="service-card">
+            <h5>
+              RESIDENTIAL<br />AND<br />COMMERCIAL SALE
+            </h5>
+            <button className="read-more-btn">READ MORE</button>
           </div>
         </Link>
 
         <Link to="/estateservice2" className="service-link">
-          <div>
-            <h5>PROPERTY DEVELOPMENT<br /> AND <br /> MANAGEMENT</h5>
+          <div className="service-card">
+            <h5>
+              PROPERTY DEVELOPMENT<br />AND<br />MANAGEMENT
+            </h5>
+            <button className="read-more-btn">READ MORE</button>
           </div>
         </Link>
 
         <Link to="/estateservice3" className="service-link">
-          <div>
-            <h5>LAND AQUISITION <br />AND<br /> LEASING</h5>
+          <div className="service-card">
+            <h5>
+              LAND AQUISITION<br />AND<br />LEASING
+            </h5>
+            <button className="read-more-btn">READ MORE</button>
           </div>
         </Link>
 
         <Link to="/estateservice4" className="service-link">
-          <div>
-            <h5>REAL ESTATE INVESTMENT<br />CONSULTANCY</h5>
+          <div className="service-card">
+            <h5>
+              REAL ESTATE INVESTMENT<br />CONSULTANCY
+            </h5>
+            <button className="read-more-btn">READ MORE</button>
           </div>
         </Link>
-
       </div>
 
+      {/* CONTACT SECTION — UNCHANGED */}
       <div className="contact-wrapper">
         <div className="contact-left">
           <h4>Get In Touch</h4>
@@ -58,9 +68,9 @@ function Esto() {
             tailored to capture your unique style and personality.
           </p>
           <ul>
-            <li>✅ 20+ Years Of Experience</li>
-            <li>✅ Professionalism</li>
-            <li>✅ Custom & Personalized Design</li>
+            <li>20+ Years Of Experience</li>
+            <li>Professionalism</li>
+            <li>Custom & Personalized Design</li>
           </ul>
         </div>
 
@@ -99,7 +109,6 @@ function Esto() {
           </form>
         </div>
       </div>
-
     </div>
   );
 }

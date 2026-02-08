@@ -1,57 +1,107 @@
-import React, { useState } from "react";
-import { trackingData } from "../data/trackingData";
-import "./Tracking.css";
+import React from "react";
+import { Link } from "react-router-dom"; 
+import backVideo from "./assets/realesto.webm"; 
+import Estologo from "./assets/Estologo.png";
+import './Esto.css';
 
-const Tracking = () => {
-  const [trackingNumber, setTrackingNumber] = useState("");
-  const [shipment, setShipment] = useState(null);
-  const [error, setError] = useState("");
-
-  const handleTrack = () => {
-    const result = trackingData[trackingNumber.trim()];
-
-    if (result) {
-      setShipment(result);
-      setError("");
-    } else {
-      setShipment(null);
-      setError("Tracking number not found");
-    }
-  };
-
+function Esto() {
   return (
-    <div className="tracking-container">
-      <h2>Track Your Cargo</h2>
+    <div className="video-container">
+      <video
+        src={backVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="background-video"
+      />
 
-      <div className="tracking-input">
-        <input
-          type="text"
-          placeholder="Enter Tracking Number (e.g. BL10001)"
-          value={trackingNumber}
-          onChange={(e) => setTrackingNumber(e.target.value)}
-        />
-        <button onClick={handleTrack}>Track</button>
+      <h3>REAL ESTATE SERVICES</h3>
+
+      <div className="service">
+
+        <Link to="/estateservice1" className="service-link">
+          <div>
+            <h5>RESIDENTIAL<br /> AND <br />COMMERCIAL SALE</h5>
+          </div>
+        </Link>
+
+        <Link to="/estateservice2" className="service-link">
+          <div>
+            <h5>PROPERTY DEVELOPMENT<br /> AND <br /> MANAGEMENT</h5>
+          </div>
+        </Link>
+
+        <Link to="/estateservice3" className="service-link">
+          <div>
+            <h5>LAND AQUISITION <br />AND<br /> LEASING</h5>
+          </div>
+        </Link>
+
+        <Link to="/estateservice4" className="service-link">
+          <div>
+            <h5>REAL ESTATE INVESTMENT<br />CONSULTANCY</h5>
+          </div>
+        </Link>
+
       </div>
 
-      {error && <p className="tracking-error">{error}</p>}
-
-      {shipment && (
-        <div className="tracking-result">
-          <p><strong>Status:</strong> {shipment.status}</p>
-          <p><strong>Origin:</strong> {shipment.origin}</p>
-          <p><strong>Destination:</strong> {shipment.destination}</p>
-          <p><strong>Last Update:</strong> {shipment.lastUpdate}</p>
-
-          <h4>Shipment Progress</h4>
+      <div className="contact-wrapper">
+        <div className="contact-left">
+          <h4>Get In Touch</h4>
+          <h2>
+            Let’s Talk about your <br />
+            <span>Next Project</span>
+          </h2>
+          <p>
+            Transform your space with comprehensive & personalized services,
+            tailored to capture your unique style and personality.
+          </p>
           <ul>
-            {shipment.progress.map((step, index) => (
-              <li key={index}>{step}</li>
-            ))}
+            <li>✅ 20+ Years Of Experience</li>
+            <li>✅ Professionalism</li>
+            <li>✅ Custom & Personalized Design</li>
           </ul>
         </div>
-      )}
+
+        <div className="contact-right">
+          <form>
+            <div className="input-row">
+              <div className="input-group">
+                <label>Full Name *</label>
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div className="input-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="Enter your email" />
+              </div>
+            </div>
+
+            <div className="input-row">
+              <div className="input-group">
+                <label>Phone Number *</label>
+                <input type="text" placeholder="Enter phone number" />
+              </div>
+              <div className="input-group">
+                <label>Subject *</label>
+                <input type="text" placeholder="Enter subject" />
+              </div>
+            </div>
+
+            <div className="input-group full-width">
+              <label>Textarea *</label>
+              <textarea placeholder="Write message" rows="5" />
+            </div>
+
+            <button type="submit" className="submit-btn">
+              Send Us Message <span>➤</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
     </div>
   );
-};
+}
 
-export default Tracking;
+export default Esto;

@@ -1,192 +1,188 @@
+/* ===== SERVICE LINK ===== */
 .service-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-.service-link div {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.service-link div:hover {
-  transform: scale(1.05);
-  background: rgba(255,255,255,0.1);
-}
-
-/*.service div.clickable {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.service div.clickable:hover {
-  transform: scale(1.05);
-  background: rgba(255,255,255,0.1);
-}
-
-/*.video-container { 
-    position: relative; 
-    width: 100%; 
-    height: 100vh; /* Full screen */ 
-    /*overflow: hidden; 
-}*/
-
+/* ===== VIDEO ===== */
 .video-container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;  /* ✅ Allow content to grow past initial screen */
-    overflow-x: hidden; /* Optional: prevent sideways scrolling */
-    overflow-y: auto;   /* Optional: allow scrolling if needed */
-    padding-bottom: 2rem; /* Add breathing room at bottom */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
 }
 
-.video-container h3{
-    text-align: center;
+.background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
 }
- .background-video { 
-     position: fixed; 
-     top: 50%; left: 50%; 
-     min-width: 100%; 
-     min-height: 100%; 
-     transform: translate(-50%, -50%); 
-     object-fit: cover; z-index: -1; 
- } 
- .content { 
-     z-index: 1; 
-     color: white; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20rem;
-}
-.content h2{
-    font-size: xx-large;
 
+.video-container h3 {
+  text-align: center;
+  color: white;
 }
-.service{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+
+/* ===== SERVICES ===== */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+/* ORIGINAL CARD STYLE — KEPT */
 .service div {
-    min-width: 300px;
-    height: 250px;
-    margin: 10px;
-    background-color: #0f0f0f8b;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  min-width: 300px;
+  height: 250px;
+  margin: 10px;
+  background-color: #0f0f0f8b;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* OVERRIDE FOR BUTTON STACKING */
+.service div.service-card {
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+.service-card h5 {
+  color: white;
+  line-height: 1.4;
+}
+
+/* READ MORE BUTTON */
+.read-more-btn {
+  padding: 10px 22px;
+  background-color: transparent;
+  color: #f4b400;
+  border: 2px solid #f4b400;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background-color: #f4b400;
+  color: black;
+}
+
+/* ===== CONTACT SECTION (ORIGINAL STYLING RESTORED) ===== */
 .contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 3rem;
-    background-color: #0f0f0f8b;
-    color: white;
-    border-radius: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .contact-left {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .contact-left h2 {
-    font-size: 2rem;
-    margin: 10px 0;
-  }
-  
-  .contact-left h2 span {
-    color: #f4b400;
-  }
-  
-  .contact-left p {
-    margin-bottom: 20px;
-    color: #ccc;
-  }
-  
-  .contact-left ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact-left li {
-    margin-bottom: 10px;
-    text-align: left;
-    font-size: 1rem;
-    color: #f4b400;
-  }
-  
-  .contact-left li::before {
-    content: '✔️ ';
-    color: #f4b400;
-    margin-right: 10px;
-  }
-  
-  .contact-right {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .input-row {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .input-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-group input,
-  .input-group textarea {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    font-size: 1rem;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  .submit-btn {
-    background-color: #f4b400;
-    color: black;
-    border: none;
-    padding: 15px 25px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #e3a900;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 3rem;
+  background-color: #0f0f0f8b;
+  color: white;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.contact-left h2 span {
+  color: #f4b400;
+}
+
+.contact-left p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.contact-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-left li {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 1rem;
+  color: #f4b400;
+}
+
+.contact-left li::before {
+  content: "✔️ ";
+  margin-right: 10px;
+}
+
+/* FORM */
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input,
+.input-group textarea {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.submit-btn {
+  background-color: #f4b400;
+  color: black;
+  border: none;
+  padding: 15px 25px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #e3a900;
+}
