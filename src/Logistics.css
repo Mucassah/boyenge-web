@@ -383,7 +383,8 @@
 
   .home-fold__title {
     top: 25%;
-    line-height: 0.80;
+    left: 5%;
+    line-height: 0.60;
   }
 
   .track-btn-wrapper {
