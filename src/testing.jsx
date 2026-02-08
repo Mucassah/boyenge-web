@@ -1,47 +1,57 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Security.css";
+import React, { useState } from "react";
+import { trackingData } from "../data/trackingData";
+import "./Tracking.css";
 
-import privateBg from "./assets/private-army.jpg";
-import otherBg from "./assets/other-security.jpg";
+const Tracking = () => {
+  const [trackingNumber, setTrackingNumber] = useState("");
+  const [shipment, setShipment] = useState(null);
+  const [error, setError] = useState("");
 
-const Security = () => {
-  const navigate = useNavigate();
+  const handleTrack = () => {
+    const result = trackingData[trackingNumber.trim()];
+
+    if (result) {
+      setShipment(result);
+      setError("");
+    } else {
+      setShipment(null);
+      setError("Tracking number not found");
+    }
+  };
 
   return (
-    <div className="mainsecurity-container">
-      <div className="mainsecurity-header">
-        <h1>Boyenge Security</h1>
-        <p>Elite Protection & Professional Security Solutions</p>
+    <div className="tracking-container">
+      <h2>Track Your Cargo</h2>
+
+      <div className="tracking-input">
+        <input
+          type="text"
+          placeholder="Enter Tracking Number (e.g. BL10001)"
+          value={trackingNumber}
+          onChange={(e) => setTrackingNumber(e.target.value)}
+        />
+        <button onClick={handleTrack}>Track</button>
       </div>
 
-      <h2 className="core-services-title">Our Core Services</h2>
+      {error && <p className="tracking-error">{error}</p>}
 
-      <div className="services-wrapper">
-        {/* Private Security */}
-        <div
-          className="service-cardmain private-security"
-          style={{ backgroundImage: `url(${privateBg})` }}
-          onClick={() => navigate("/security1")}
-        >
-          <div className="service-content">
-            <h3>PRIVATE ARMY</h3>
-          </div>
-        </div>
+      {shipment && (
+        <div className="tracking-result">
+          <p><strong>Status:</strong> {shipment.status}</p>
+          <p><strong>Origin:</strong> {shipment.origin}</p>
+          <p><strong>Destination:</strong> {shipment.destination}</p>
+          <p><strong>Last Update:</strong> {shipment.lastUpdate}</p>
 
-        {/* Other Security Services */}
-        <div
-          className="service-cardmain other-security"
-          style={{ backgroundImage: `url(${otherBg})` }}
-          onClick={() => navigate("/security2")}
-        >
-          <div className="service-content">
-            <h3>OTHER SECURITY SERVICES</h3>
-          </div>
+          <h4>Shipment Progress</h4>
+          <ul>
+            {shipment.progress.map((step, index) => (
+              <li key={index}>{step}</li>
+            ))}
+          </ul>
         </div>
-      </div>
+      )}
     </div>
   );
 };
 
-export default Security;
+export default Tracking;

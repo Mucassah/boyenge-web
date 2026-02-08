@@ -1,103 +1,50 @@
-/* Main container */
-.mainsecurity-container {
-  min-height: 100vh;
-  background: linear-gradient(#f4f6f8, #e9edf2);
-  padding-bottom: 60px;
-  font-family: Arial, Helvetica, sans-serif;
+.tracking-container {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Header section */
-.mainsecurity-header {
-  background: linear-gradient(135deg, #0b2e4f, #1b4f72);
-  color: #ffffff;
+.tracking-container h2 {
   text-align: center;
-  padding: 50px 20px;
+  margin-bottom: 2rem;
 }
 
-.mainsecurity-header h1 {
-  margin: 0;
-  font-size: 36px;
-  font-weight: 700;
+.tracking-input {
+  display: flex;
+  gap: 10px;
 }
 
-.mainsecurity-header p {
-  margin-top: 10px;
-  font-size: 16px;
+.tracking-input input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.tracking-input button {
+  padding: 12px 24px;
+  background: #004488;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.tracking-input button:hover {
   opacity: 0.9;
 }
 
-/* Core services title */
-.core-services-title {
-  text-align: center;
-  margin: 40px 0 30px;
-  font-size: 24px;
-  font-weight: 600;
-  color: #222;
+.tracking-error {
+  color: red;
+  margin-top: 1rem;
 }
 
-/* Services wrapper */
-.services-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  padding: 0 20px;
+.tracking-result {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1.5rem;
 }
 
-/* Service cards */
-.service-cardmain {
-  width: 500px;
-  height: 350px;
-  border-radius: 14px;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Dark overlay */
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
-
-/* Hover effect */
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
-}
-
-/* Card content */
-.service-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Card title */
-.service-content h3 {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 600;
-  color: #111;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .services-wrapper {
-    gap: 25px;
-  }
-
-  .service-card {
-    width: 100%;
-    max-width: 360px;
-  }
+.tracking-result ul {
+  margin-top: 1rem;
+  padding-left: 20px;
 }

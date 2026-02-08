@@ -1,51 +1,144 @@
-.tracking-container {
-    max-width: 700px;
-    margin: 4rem auto;
-    padding: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Page background */
+.tracking-page {
+    min-height: 100vh;
+    background: url("../assets/world.png") no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  .tracking-container h2 {
+  /* Glass card */
+  .tracking-card {
+    width: 90%;
+    max-width: 800px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .tracking-card h2 {
     text-align: center;
     margin-bottom: 2rem;
+    letter-spacing: 1px;
   }
   
+  /* Input area */
   .tracking-input {
     display: flex;
-    gap: 10px;
+    gap: 12px;
   }
   
   .tracking-input input {
     flex: 1;
-    padding: 12px;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
     font-size: 1rem;
   }
   
   .tracking-input button {
-    padding: 12px 24px;
-    background: #004488;
-    color: white;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #1a73e8, #004488);
+    color: #fff;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
   }
   
   .tracking-input button:hover {
     opacity: 0.9;
   }
   
+  /* Error */
   .tracking-error {
-    color: red;
+    color: #d32f2f;
     margin-top: 1rem;
+    text-align: center;
   }
   
-  .tracking-result {
+  /* Progress bar */
+  .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+    position: relative;
+  }
+  
+  .progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #ddd;
+    z-index: 0;
+  }
+  
+  .step {
+    background: #ddd;
+    color: #555;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    z-index: 1;
+  }
+  
+  .step.active {
+    background: #1a73e8;
+    color: #fff;
+  }
+  
+  /* Shipment details */
+  .tracking-details {
     margin-top: 2rem;
-    border-top: 1px solid #ddd;
-    padding-top: 1.5rem;
+    background: #f5f7fa;
+    padding: 1.5rem;
+    border-radius: 10px;
   }
   
-  .tracking-result ul {
-    margin-top: 1rem;
+  .tracking-details p {
+    margin: 0.4rem 0;
+    color: #333;
+  }
+  
+  /* Progress list */
+  .tracking-progress {
+    margin-top: 2rem;
+  }
+  
+  .tracking-progress h4 {
+    margin-bottom: 0.8rem;
+    color: #222;
+  }
+  
+  .tracking-progress ul {
+    list-style: disc;
     padding-left: 20px;
+  }
+  
+  .tracking-progress li {
+    margin-bottom: 6px;
+    color: #fefefe;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .tracking-input {
+      flex-direction: column;
+    }
+  
+    .progress-bar {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .progress-bar::before {
+      display: none;
+    }
   }
   
