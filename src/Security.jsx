@@ -2,9 +2,18 @@ import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Security.css';
 
+// Import newly required assets for the About Section
+import privateSecurityImg from "./assets/Privatesecurity.JPG";
+
 const Security = () => {
   const navigate = useNavigate();
   const overviewRef = useRef(null);
+
+  // Function to scroll down to services from the About section
+  const scrollToCoreServices = () => {
+    const servicesSection = document.getElementById('services');
+    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   // Animation Trigger on Scroll
   useEffect(() => {
@@ -45,7 +54,6 @@ const Security = () => {
               Private Army
             </button>
           </div>
-          {/* Email link */}
           <a href="mailto:security@boyenge.com" className="bs-nav-cta-wrapper">
             <button className="bs-nav-cta-btn">Engage Our Team</button>
           </a>
@@ -65,7 +73,6 @@ const Security = () => {
               corporate, institutional, and high-risk contexts.
             </p>
             <div className="bs-hero-actions">
-              {/* Connected to Security2.jsx */}
               <button 
                 onClick={() => navigate('/Security2')} 
                 className="bs-btn-solid-gold"
@@ -82,6 +89,39 @@ const Security = () => {
           </div>
         </div>
       </section>
+
+      {/* ================= ADDED ABOUT SECTION ================= */}
+      <section className="sec-about-container">
+        <div className="sec-about-content">
+          <span className="sec-about-subtitle">WHO WE ARE</span>
+          <h2 className="sec-about-title">BOYENGE SECURITY</h2>
+
+          <p className="sec-about-text">
+            At Boyenge Security, we are dedicated to providing unparalleled
+            protection and security solutions for a diverse range of clients.
+            With years of expertise in military, private security, and
+            specialized protection services, we ensure safety, reliability, and
+            peace of mind.
+            <br /><br />
+            Our team is composed of highly trained professionals with experience
+            in military and army operations, giving us a unique edge in
+            strategic planning, risk assessment, and operational execution.
+          </p>
+
+          <button className="sec-about-btn" onClick={scrollToCoreServices}>
+            READ MORE
+          </button>
+        </div>
+
+        <div className="sec-about-image-wrapper">
+          <img
+            src={privateSecurityImg}
+            alt="Private Security"
+            className="sec-about-image"
+          />
+        </div>
+      </section>
+      {/* ======================================================= */}
 
       {/* DIVISION OVERVIEW - ANIMATED */}
       <section id="overview" className="bs-division-container" ref={overviewRef}>
@@ -101,7 +141,6 @@ const Security = () => {
                   <li>Professional Guarding</li>
                   <li>Security Technology</li>
                 </ul>
-                {/* Connected to Security2.jsx */}
                 <button 
                   onClick={() => navigate('/Security2')} 
                   className="bs-read-more-btn"
