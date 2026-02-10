@@ -65,11 +65,6 @@ function App() {
             <Route path="/football" element={<Football />} />
             <Route path="/television" element={<Television />} />
             <Route path="/track" element={<Tracking />} />
-
-            
-
-
-
             {/* Add more routes here as needed */}
           </Routes>
         </main>

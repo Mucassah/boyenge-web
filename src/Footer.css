@@ -4,14 +4,13 @@
 
    .Footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;      /* Stack on mobile & tablet */
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;          /* keeps footer in one line */
-    white-space: nowrap;
-    font-size: 8px;             /* mobile size */
-    margin: 4px;
-    gap: 8px;
+    text-align: center;
+    font-size: 10px;
+    margin: 6px;
+    gap: 6px;
 }
 
 .Footer a {
@@ -24,7 +23,10 @@
     color: rgb(198, 143, 67);
 }
 
-/* Social Media Icons */
+/* =========================
+   Social Media Icons
+   ========================= */
+
 .FooterSocials {
     display: flex;
     justify-content: center;
@@ -34,7 +36,7 @@
 }
 
 .FooterSocials a {
-    font-size: 14px;            /* mobile icon size */
+    font-size: 14px;             /* mobile icon size */
     color: inherit;
 }
 
@@ -43,14 +45,14 @@
 }
 
 /* =========================
-   Tablets
+   Tablets (still stacked)
    ========================= */
 
 @media (min-width: 768px) {
     .Footer {
         font-size: 12px;
-        gap: 12px;
-        margin: 6px;
+        gap: 8px;
+        margin: 8px;
     }
 
     .Footer a {
@@ -67,14 +69,16 @@
 }
 
 /* =========================
-   Large screens / Desktops
+   Large screens / Laptops & Desktops
    ========================= */
 
 @media (min-width: 1200px) {
     .Footer {
+        flex-direction: row;     /* Side by side ONLY on large screens */
+        flex-wrap: nowrap;
         font-size: 14px;
         gap: 16px;
-        margin: 8px;
+        margin: 10px;
     }
 
     .Footer a {

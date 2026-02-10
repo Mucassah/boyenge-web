@@ -34,16 +34,24 @@ function Security() {
 
           <div className="sec-security__service-list">
 
+            {/* UPDATED SERVICE */}
             <div className="sec-security__service-item">
               <div className="sec-security__service-text">
-                <h4>Private & Corporate Security Solutions</h4>
+                <h4>Professional Guarding Services</h4>
                 <p>
-                  Tailored physical security, access control, and executive protection
-                  services for businesses and individuals.
+                  Structured guarding programs for facilities and assets.
+                  <br /><br />
+                  Includes:
+                  <br />• Static guarding
+                  <br />• Commercial site security
+                  <br />• Residential estate security
+                  <br />• Industrial facility guarding
+                  <br />• Access control operations
+                  <br />• Gate & perimeter security
                 </p>
               </div>
               <div className="sec-security__service-image">
-                <img src={privatesec} alt="Private security" />
+                <img src={privatesec} alt="Professional Guarding Services" />
               </div>
             </div>
 

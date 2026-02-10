@@ -13,7 +13,7 @@ function Footer() {
                 <a href="#">Terms of Service</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Connect</a>
-                <a href="#">&copy; Boyengeholdinggroup</a>
+                <a href="#">Copyright &copy; Boyengeholdinggroup -All rights reserved</a>
             </div>
 
             {/* Social Media Icons */}
